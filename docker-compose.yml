@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+
+  webapp:
+
+    image: mcr.microsoft.com/azure-cli
+    
+    volumes:
+      - ~/docker/my_web_app/python-docs-hello-world:/home
+
