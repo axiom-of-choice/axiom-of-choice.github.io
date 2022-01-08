@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificates and courses</title>
+</head>
+<body>
+<h1>In this page you can reach the certifications that I've completed and schools where I've participated</h1>
+<ul>
+    <li><a href="https://portal.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=414&cvid=jlqG6GsGh69aqvgbIui9eg==">AZ-900: Microsoft Azure Fundamentals</a></li>
+    <p></p>
+    <li>
+       <button type="button" class="collapsible">Data Scientist With Python Track</button>
+    <div class="collapsible">
+        <p></p>
+        <a href = 'https://www.datacamp.com/statement-of-accomplishment/track/a9cdb364aa32f16e2011560373745426634ea540'>Certificate Entire Track</a>
+        <p></p>
+        <p>This track includes:</p>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    </li>
+    <p></p>
+    <li><a href="">Data Science School</a></li>
+    <li><a href="">R Programming Course</a></li>
+    <li><a href="https://drive.google.com/file/d/1oa06IySgWzWL2Sles453oZY_WQOrsIJy/view">First International School of Mathematical Epidemiology</a></li>
+    <li><a href="">Python For Everybody Specialization</a></li>
+    <li></li>
+</ul>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
