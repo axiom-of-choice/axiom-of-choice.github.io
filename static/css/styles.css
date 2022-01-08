@@ -1,9 +1,9 @@
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-  background-color: #eee;
-  color: #444;
+  background-color: lightblue;
+  color: black;
   cursor: pointer;
-  padding: 18px;
+  padding: 0 px;
   width: 100%;
   border: none;
   text-align: left;
@@ -12,8 +12,7 @@
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: #ccc;
+.active, .collapsible:hover {;
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -21,5 +20,28 @@
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: lightblue;
+}
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: lightblue;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Changes the style for the title */
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539F;
+}
+
+body {
+  background-color: lightblue;
+  opacity: 1;
 }
