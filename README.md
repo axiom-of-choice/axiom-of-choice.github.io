@@ -1,4 +1,3 @@
 # my_web_page
-The code for my personal web page programmed in Flask, HTML, CSS, JS and deployed with Heroku.
+The code for my personal web just using GitHub Pages
 
-(https://axiom-of-choice.herokuapp.com/)
