@@ -19,7 +19,7 @@ Mathematics degree with strong fundamentals in ML theory, distributed systems, a
 ### Staff AI Engineer | VerveMarket
 **June 2025 - Present**
 
-Leading, implementing, architecting and owning AI/Data projects working directly with the CTO.
+AI-powered grocery delivery platform personalized by dietary needs. [shop.vervemarket.com](https://shop.vervemarket.com) — Leading, implementing, architecting and owning AI/Data projects working directly with the CTO.
 
 - AI-assisted hybrid search engine for product discovery
 - AI-powered taxonomy product classification using LLM fine-tuning for NER
@@ -50,7 +50,7 @@ Mexico's leading accounting and enterprise software company. [contpaqi.com](http
 ### Senior Machine Learning Engineer | Nubank
 **January 2024 - May 2025**
 
-Top LATAM Fintech (100M+ customers).
+Largest digital bank in LATAM, 130M+ customers across Brazil, Mexico, and Colombia. [nubank.com.br](https://nubank.com.br/en/)
 
 - End-to-end deployment of real-time and batch risk (underwriting) models: data integration, training, packaging, integration, and monitoring as microservices on K8s clusters
 - Developed a Scala-based data integrity framework to monitor sudden data changes on business metrics datasets
@@ -59,7 +59,7 @@ Top LATAM Fintech (100M+ customers).
 ### Senior Data Engineer | Citigroup
 **July 2023 - January 2024**
 
-Top 3 US bank, global presence in 160+ countries.
+Top 3 US bank, global presence in 160+ countries. [citigroup.com](https://www.citigroup.com)
 
 - Core contributor and technical lead migrating petabyte-scale on-premise Data Lake (Hadoop/Hive) to cloud Data Lakehouse (S3, Snowflake)
 - Deployed Spark jobs in EKS clusters performing batch ingestion and transformations (dozens of TBs daily)

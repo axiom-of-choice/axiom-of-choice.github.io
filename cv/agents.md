@@ -37,7 +37,8 @@ When updating CV information:
 - **Staff AI Engineer** @ VerveMarket (June 2025 - Present)
 
 ### Company descriptors (verified)
-- **Nubank** → "Top LATAM Fintech (100M+ customers)" — https://nubank.com.br/en/
+- **VerveMarket** → "AI-powered grocery delivery platform personalized by dietary needs. Founded by Andrés, Anthony, and Jason" — https://shop.vervemarket.com
+- **Nubank** → "Largest digital bank in LATAM, 130M+ customers across Brazil, Mexico, and Colombia" — https://nubank.com.br/en/
 - **Citigroup** → "Top 3 US bank, global presence in 160+ countries" — https://www.citigroup.com
 - **BBVA AI Factory** → "Largest bank in Mexico by customers" — https://www.bbvaaifactory.com
 - **Contpaqi** → "Mexico's leading accounting and enterprise software company (contabilidad, facturación electrónica, nómina, inventarios). SAT-compliant" — https://www.contpaqi.com
