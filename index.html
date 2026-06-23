@@ -3,22 +3,269 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Isaac Hernandez landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Isaac Hernandez Landing page </title>
+    <meta name="description" content="Isaac Hernandez - Staff AI Engineer. AI/ML Engineering, Data Engineering, and Software Development.">
+    <meta name="author" content="Isaac Hernandez">
+    <title>Isaac Hernandez | Staff AI Engineer</title>
     <!-- font icons -->
     <link rel="stylesheet" href="./assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="./assets/css/steller.css">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #333333;
+            --text-secondary: #555555;
+            --card-bg: #ffffff;
+            --border-color: #dee2e6;
+            --nav-bg: rgba(255,255,255,0.97);
+            --badge-bg: #f0f0f0;
+            --badge-text: #333;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a2e;
+            --bg-secondary: #16213e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --card-bg: #0f3460;
+            --border-color: #1a1a4e;
+            --nav-bg: rgba(26,26,46,0.97);
+            --badge-bg: #1a1a4e;
+            --badge-text: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        [data-theme="dark"] .navbar {
+            background-color: var(--nav-bg) !important;
+        }
+
+        [data-theme="dark"] .navbar-light .navbar-nav .nav-link {
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        [data-theme="dark"] .section {
+            background-color: var(--bg-primary);
+        }
+
+        [data-theme="dark"] .card,
+        [data-theme="dark"] .custom-card {
+            background-color: var(--card-bg);
+            border-color: var(--border-color) !important;
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .card-body {
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+        [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6,
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] a {
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] a:hover {
+            color: #ff7a57;
+        }
+
+        [data-theme="dark"] .btn-dark {
+            background-color: #ff7a57;
+            border-color: #ff7a57;
+            color: #fff;
+        }
+
+        [data-theme="dark"] .progress {
+            background-color: #1a1a4e;
+        }
+
+        [data-theme="dark"] .page-footer {
+            background-color: #0f0f23;
+        }
+
+        [data-theme="dark"] .testmonial-card {
+            background-color: var(--card-bg);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--text-primary);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            color: var(--text-primary);
+        }
+
+        .theme-toggle:hover {
+            border-color: #ff7a57;
+            color: #ff7a57;
+        }
+
+        .experience-item {
+            border-left: 3px solid #ff7a57;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ff7a57;
+        }
+
+        .experience-item h5 {
+            margin-bottom: 2px;
+        }
+
+        .experience-item .company {
+            color: #ff7a57;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .experience-item .date {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .experience-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin: 2px;
+            font-weight: 500;
+        }
+
+        .project-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: var(--card-bg);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-card h5 {
+            margin-bottom: 8px;
+        }
+
+        .project-card .project-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .project-card .project-links a {
+            color: #ff7a57;
+            font-size: 0.85rem;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .project-card .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .cert-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cert-item:last-child {
+            border-bottom: none;
+        }
+
+        .cert-item a {
+            color: #ff7a57;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .cert-item a:hover {
+            text-decoration: underline;
+        }
+
+        .cert-item .cert-issuer {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .highlight-banner {
+            background: linear-gradient(135deg, #ff7a57 0%, #ff5e3a 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff7a57;
+        }
+
+        .stat-item .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
-            <!---
-            <a class="navbar-brand" href="#"><img src="./assets/imgs/logo.svg" alt=""></a>
-            -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,258 +279,438 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Hard Skills</a>
-                    </li>                   
-                        <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a> 
+                        <a class="nav-link" href="#experience">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testmonial">Testmonial</a>
-                    </li>
-                    <!--
-                        <li class="nav-item"> Dont HAVE a BLOG
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Certifications and Specializations</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#personal">Personal stuff</a>
+                        <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <!-- <a class="- btn btn-primary rounded ml-4" href="components.html">Copmonents</a>-->
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="ti-shine" id="themeIcon"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
-        </div>          
+        </div>
     </nav>
-    <!-- End of page navibation -->
+    <!-- End of page navigation -->
 
     <!-- Page Header -->
     <header class="header" id="home">
         <div class="container">
             <div class="infos">
-                <h6 class="subtitle">Hello,I'm</h6>
+                <h6 class="subtitle">Hello, I'm</h6>
                 <h6 class="title">Isaac Hernandez</h6>
-                <p>Senior Machine Learning Engineer @ <a href="https://nubank.com.br/en/">Nubank</a> </p>
-                <p>AI Engineer @ <a href="https://botco.ai">Botco.AI</a> </p>
-                <p>Former Machine Learning Engineer @ <a href="https://www.bbvaaifactory.com/es/about-us/">BBVA AI Factory</a></p>
-                <div class="buttons pt-3">
-                    <!--
-                    <button class="btn btn-primary rounded mr-3">HIRE ME</button>
-                    -->
-                    <a href="https://www.canva.com/design/DAFScipfP-Q/MZZ-78ertO3ff44cZb_vWw/view?utm_content=DAFScipfP-Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank">
-                        <button class="btn btn-dark rounded">Check my resume</button>
-                    </a>
-                </div>      
+                <p><strong>Staff AI Engineer</strong> @ <a href="https://vervemarket.com">VerveMarket</a></p>
+                <p>Former Senior ML Engineer @ <a href="https://nubank.com.br/en/">Nubank</a></p>
+                <p>Former Senior AI Engineer @ <a href="https://www.telepatia.ai/es">Telepatia AI</a></p>
+                <p>Former Lead R&D Engineer in Agentic AI @ <a href="https://www.softserveinc.com/en-us">SoftServe</a></p>
 
                 <div class="socials mt-4">
-                    <!--<a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>-->
                     <a class="social-item" href="mailto:isadohergar@gmail.com"><i class="ti-email"></i></a>
                     <a class="social-item" href="https://www.linkedin.com/in/isaac-hernandez-garcia-9905/" target="_blank"><i class="ti-linkedin"></i></a>
                     <a class="social-item" href="https://github.com/axiom-of-choice" target="_blank"><i class="ti-github"></i></a>
-                    <!--<a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>-->
                 </div>
-            </div>              
+            </div>
             <div class="img-holder">
                 <img src="./assets/imgs/man.svg" alt="">
-            </div>      
-        </div>  
-
-        <!-- Header-widget -->
+            </div>
+        </div>
+    </header>
     <!-- End of Page Header -->
-    
+
     <!-- About section -->
     <section id="about" class="section mt-3">
         <div class="container mt-5">
             <div class="row text-center text-md-left">
                 <div class="col-md-3">
-                    <img src="https://shorturl.at/jCJ05" alt="" class="img-thumbnail mb-4">
+                    <img src="https://shorturl.at/jCJ05" alt="Isaac Hernandez" class="img-thumbnail mb-4">
                 </div>
                 <div class="pl-md-4 col-md-9">
                     <h6 class="title">Isaac Hernandez</h6>
-                    <p class="subtitle">Machine Learning Engineer / Data Engineer</p>
-                    <p></p> 
-                    <p>I have 5+ years of relevant experience as ML Engineer and Data Engineer. Developing end to end data solutions collaborating with global teams, building data applications, and helping companies and teams within the companies to discover value in their data. </p>
-                    <p>As my main professional experience has been working at startups, I consider myself as data generalist or full-stack and a very fast learner. This means I can work as Machine Learning Enginner or Data Engineer; since I have hands-on experience building end-to-end data products, from collecting raw data from the sources to productionize and deploy machine learning models.</p>
-                    <p>I enjoy a lot solving problems and looking for innovative solutions through data products and automating processes.</p>
-                    <p>Looking for opportunities to push my skills and keep learning to help the growth of the company through data driven solutions collaborating with cross-functional and international teams..</p>
-                    <!--
-                    <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>                   
-                    -->
+                    <p class="subtitle">Staff AI Engineer / ML Engineer / Data Engineer</p>
+                    <p></p>
+                    <p>AI Engineer with 5+ years of experience building end-to-end AI and data solutions across fintech, healthtech, and e-commerce. I specialize in taking ML models from research to production at scale, architecting data infrastructure, and leading cross-functional teams.</p>
+                    <p>Bachelor's degree in Mathematics from UNAM (GPA: 92/100). Strong foundation in machine learning theory, statistics, and software engineering. Experienced working with global teams across US, LATAM, and international markets.</p>
+                    <p>Passionate about building data-driven products that generate measurable business impact.</p>
+
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Companies</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service section -->
-    <section id="service" class="section">
-        <div class="container text-center">
-
-            <h6 class="section-title mb-4">What I Do</h6>
-            <p class="mb-5 pb-4"> Build end-to-end scalable Data solutions and products with state-of-the art tech stack  <br>     </p>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h6 class="section-title mb-4 text-center">Work Experience</h6>
+            <p class="mb-5 pb-4 text-center">Building production AI/ML systems at scale across industries</p>
 
             <div class="row">
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-crown"></i>
-                            <h5>Data Pipelines</h5>
-                        </div>
+                <div class="col-md-6">
+                    <div class="experience-item">
+                        <h5>Staff AI Engineer</h5>
+                        <span class="company">VerveMarket</span>
+                        <div class="date">June 2025 - Present</div>
+                        <p>Leading and owning AI/Data projects. Built AI-assisted hybrid search engine, AI-powered taxonomy product classification, LLM fine-tuning for NER. Working directly with the CTO on data engineering and infrastructure.</p>
+                        <span class="tech-badge">LLMs</span>
+                        <span class="tech-badge">NER</span>
+                        <span class="tech-badge">Search</span>
+                        <span class="tech-badge">Data Pipelines</span>
+                    </div>
+
+                    <div class="experience-item">
+                        <h5>Lead AI Engineer</h5>
+                        <span class="company">Contpaqi</span>
+                        <div class="date">September 2025 - February 2026</div>
+                        <p>Led development of agentic solutions for accounting services: automated invoice generation, tax status certificates, and compliance workflows.</p>
+                        <span class="tech-badge">Agents</span>
+                        <span class="tech-badge">LLMs</span>
+                        <span class="tech-badge">Automation</span>
+                    </div>
+
+                    <div class="experience-item">
+                        <h5>Lead Researcher & Development</h5>
+                        <span class="company">SoftServe</span>
+                        <div class="date">July 2025 - November 2025</div>
+                        <p>Led MVP development of an agentic healthcare platform. Automated medical form filling through OCR and STT services.</p>
+                        <span class="tech-badge">Healthcare AI</span>
+                        <span class="tech-badge">OCR</span>
+                        <span class="tech-badge">STT</span>
+                        <span class="tech-badge">Agents</span>
+                    </div>
+
+                    <div class="experience-item">
+                        <h5>Lead AI Engineer</h5>
+                        <span class="company">Telepatia AI</span>
+                        <div class="date">June 2025 - July 2025</div>
+                        <p>Led MVP development of hallucination and missing information detector for AI-assisted medical form filling from transcribed appointments.</p>
+                        <span class="tech-badge">NLP</span>
+                        <span class="tech-badge">Hallucination Detection</span>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-desktop"></i>
-                            <h5>ML Models</h5>
-                        </div>
+
+                <div class="col-md-6">
+                    <div class="experience-item">
+                        <div class="highlight-banner">Top LATAM Fintech</div>
+                        <h5>Senior Machine Learning Engineer</h5>
+                        <span class="company">Nubank</span>
+                        <div class="date">January 2024 - May 2025</div>
+                        <p>End-to-end deployment of real-time and batch risk (underwriting) models as microservices on K8s clusters. Data integration, training, packaging, and monitoring. Built a Scala-based data integrity framework for business metrics monitoring.</p>
+                        <span class="tech-badge">Scala</span>
+                        <span class="tech-badge">K8s</span>
+                        <span class="tech-badge">MLOps</span>
+                        <span class="tech-badge">Risk Models</span>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-mobile"></i>
-                            <h5>Deploy ML Apps</h5>
-                        </div>
+
+                    <div class="experience-item">
+                        <h5>Senior Data Engineer</h5>
+                        <span class="company">Citigroup</span>
+                        <div class="date">July 2023 - January 2024</div>
+                        <p>Core contributor and technical lead migrating petabyte-scale on-premise Data Lake to cloud (S3, Snowflake). Deployed Spark jobs in EKS processing dozens of TBs daily.</p>
+                        <span class="tech-badge">Spark</span>
+                        <span class="tech-badge">Snowflake</span>
+                        <span class="tech-badge">S3</span>
+                        <span class="tech-badge">EKS</span>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-bar-chart"></i>
-                            <h5>Data Analysis</h5>
-                        </div>
+
+                    <div class="experience-item">
+                        <h5>AI Engineer Consultant</h5>
+                        <span class="company">Botco AI</span>
+                        <div class="date">April 2023 - September 2025</div>
+                        <p>Core contributor to document indexer API and web scraping microservice on EKS. Fine-tuned LLMs (GPT, LLaMA) for QA and summarization. Built RAG pipelines with Vector DB.</p>
+                        <span class="tech-badge">RAG</span>
+                        <span class="tech-badge">LLMs</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">K8s</span>
+                    </div>
+
+                    <div class="experience-item">
+                        <h5>Senior Machine Learning Engineer</h5>
+                        <span class="company">BBVA AI Factory</span>
+                        <div class="date">January 2023 - July 2023</div>
+                        <p>Technical lead for community detection and graph similarity models to prevent money laundering and fraud. ETL pipelines with PySpark, Hadoop, Kafka, Hive.</p>
+                        <span class="tech-badge">Graph ML</span>
+                        <span class="tech-badge">PySpark</span>
+                        <span class="tech-badge">Anti-fraud</span>
+                    </div>
+
+                    <div class="experience-item">
+                        <h5>Data Scientist</h5>
+                        <span class="company">Cargamos</span>
+                        <div class="date">November 2021 - November 2022</div>
+                        <p>Real-time anomaly detection (Isolation Forest) on GCP. Deep CNN for image classification. Built data warehouse improving operational success from 80% to 97%.</p>
+                        <span class="tech-badge">GCP</span>
+                        <span class="tech-badge">Deep Learning</span>
+                        <span class="tech-badge">Data Warehouse</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End of Sectoin -->
+    <!-- End of Experience Section -->
 
     <!-- Skills section -->
-    <section class="section">
+    <section id="skills" class="section">
         <div class="container text-center">
-
-            <h6 class="section-title mb-4">Why Choose me</h6>
-            <p class="mb-5 pb-4"> I like a lot to keep me updated and continously improving my skills <br> I'm very resilient and proactive, self-worker and good coordinator </p>
+            <h6 class="section-title mb-4">Technical Skills</h6>
+            <p class="mb-5 pb-4">End-to-end AI/ML and Data Engineering at production scale</p>
 
             <div class="row text-left">
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Python</h6>
+                    <h6 class="mb-3">Python (TF, PyTorch, PySpark, FastAPI)</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Scala</h6>
+                    <h6 class="mb-3">Scala / Spark</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">SQL databases</h6>
+                    <h6 class="mb-3">AWS (S3, EKS, SageMaker, Lambda, Glue)</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>83%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Spark</h6>
+                    <h6 class="mb-3">LLMs / NLP / GenAI (RAG, Fine-tuning, Agents)</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><span>92%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">AWS</h6>
+                    <h6 class="mb-3">Docker / Kubernetes</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Airflow</h6>
+                    <h6 class="mb-3">SQL & NoSQL (PostgreSQL, MongoDB, Snowflake)</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 88%;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"><span>88%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Docker</h6>
+                    <h6 class="mb-3">GCP (BigQuery, VertexAI, Dataflow, GKE)</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Kubernetes</h6>
+                    <h6 class="mb-3">MLOps (MLFlow, Airflow, CI/CD)</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">No-SQL databases</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">GCP</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <h6 class="mb-3">Azure (AZ-900 Certified)</h6>
                     <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
                     </div>
                 </div>
-            </div>  
-        </div>
-    </section>
-    <!-- End of Skills sections -->
-
-    <!-- Portfolio section -->
-    <section id="portfolio" class="section">
-        <div class="container text-center">
-            <h6 class="section-title mb-4"> Check My Wonderful Works:   </h6>
-            <div class="row">
-                <div class="col-sm-4">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>LLM ChatBot Application</h5>
-                                <a href="https://llm-chatbot-rbjv6s9pz7kcjrjwd4clwm.streamlit.app"> Link to Streamlit Application<i class="ti-link"></i></a>
-                                <br>
-                                <br>
-                                <a href="https://github.com/axiom-of-choice/LLM-Chatbot"> Link to GitHub Repository<i class="ti-link"></i></a>
-                            </div>  
-                        </div>
-                </div>
-                <div class="col-sm-4">
-                     <div class="overlay">
-                        <div class="overlay-infos">
-                            <h5>CONAGUA ELT Pipeline</h5>
-                            <a href="https://github.com/axiom-of-choice/etl-conagua"> Link to GitHub repository<i class="ti-link"></i></a>
-                        </div>  
-                    </div>         
-                </div>
-                <div class="col-sm-4">
-                    <div class="overlay">
-                        <div class="overlay-infos">
-                            <h5>CONAGUA ELT Pipeline in Scala</h5>
-                            <a href="https://github.com/axiom-of-choice/etl-conagua-scala"> Link to GitHub repository<i class="ti-link"></i></a>
-                        </div>  
+                <div class="col-sm-6">
+                    <h6 class="mb-3">Big Data (Hadoop, Kafka, Hive)</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 82%;" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"><span>82%</span></div>
                     </div>
-                </div>         
+                </div>
             </div>
         </div>
     </section>
- <!-- End of Portfolio section -->
+    <!-- End of Skills section -->
 
-    <!-- Testmonial Section -->
-    <section id="testmonial" class="section">
+    <!-- Projects section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h6 class="section-title mb-4 text-center">Featured Projects</h6>
+            <p class="mb-5 pb-4 text-center">Open source work and personal projects on <a href="https://github.com/axiom-of-choice" target="_blank">GitHub</a></p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>LLM Chatbot</h5>
+                        <p class="project-desc">Streamlit chatbot performing Generative QA with indexed documents in a Vector DB (Pinecone) as knowledge base. Uses Cohere and GPT models.</p>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">LLM</span>
+                        <span class="tech-badge">Pinecone</span>
+                        <span class="tech-badge">Streamlit</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/axiom-of-choice/LLM-Chatbot" target="_blank"><i class="ti-github"></i> Code</a>
+                            <a href="https://llm-chatbot-rbjv6s9pz7kcjrjwd4clwm.streamlit.app" target="_blank"><i class="ti-link"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>AI Disease Diagnoser</h5>
+                        <p class="project-desc">Audio/text input app for symptom analysis using LLMs and Google Cloud serverless functions. Generates diagnostic suggestions.</p>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">LLM</span>
+                        <span class="tech-badge">GCP</span>
+                        <span class="tech-badge">Streamlit</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/axiom-of-choice/ai-disease-diagnoser" target="_blank"><i class="ti-github"></i> Code</a>
+                            <a href="https://raw.githubusercontent.com/axiom-of-choice/ai-disease-diagnoser/master/public/Full_usage.gif" target="_blank"><i class="ti-control-play"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>GEC System</h5>
+                        <p class="project-desc">Grammar Error Correction system developed using T5 transformer and OpenAI models for automated text correction.</p>
+                        <span class="tech-badge">T5</span>
+                        <span class="tech-badge">OpenAI</span>
+                        <span class="tech-badge">NLP</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/axiom-of-choice/GEC-system" target="_blank"><i class="ti-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>CONAGUA ELT Pipeline</h5>
+                        <p class="project-desc">ELT pipeline using Airflow, Docker, S3 and BigQuery to extract weather data from the Mexican water agency API.</p>
+                        <span class="tech-badge">Airflow</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">S3</span>
+                        <span class="tech-badge">BigQuery</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/axiom-of-choice/etl-conagua" target="_blank"><i class="ti-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>CONAGUA Pipeline (Scala)</h5>
+                        <p class="project-desc">Same ELT pipeline rebuilt in Scala with Spark, demonstrating proficiency in both Python and Scala data stacks.</p>
+                        <span class="tech-badge">Scala</span>
+                        <span class="tech-badge">Spark</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/axiom-of-choice/etl-conagua-scala" target="_blank"><i class="ti-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>Deep Learning Specialization</h5>
+                        <p class="project-desc">Complete coursework from DeepLearning.AI specialization sponsored by Google Developers ML Bootcamp LATAM 2022.</p>
+                        <span class="tech-badge">Deep Learning</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">Google</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/axiom-of-choice/Deep-Learning-Specialization" target="_blank"><i class="ti-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Projects section -->
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h6 class="section-title mb-4 text-center">Certifications & Education</h6>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 class="mb-3"><strong>Professional Certifications</strong></h6>
+                    <div class="cert-item">
+                        <a href="https://www.credential.net/257ddb28-b131-4b23-ac07-ebd029b271be#gs.yn8zm2">TensorFlow Developer Certificate</a>
+                        <div class="cert-issuer">Google / TensorFlow | May 2023</div>
+                    </div>
+                    <div class="cert-item">
+                        <a href="https://www.credly.com/badges/9d7d4bea-83c1-4dd2-9c2a-f61137f111d5">Apache Airflow Fundamentals</a>
+                        <div class="cert-issuer">Astronomer | Nov 2023</div>
+                    </div>
+                    <div class="cert-item">
+                        <a href="https://">Microsoft Azure Fundamentals (AZ-900)</a>
+                        <div class="cert-issuer">Microsoft | Dec 2021</div>
+                    </div>
+                    <div class="cert-item">
+                        <a href="https://coursera.org/share/95479c26b1e6b75b83aba2d0cb1722fb">MLOps | Machine Learning Operations</a>
+                        <div class="cert-issuer">Duke University / Coursera</div>
+                    </div>
+                    <div class="cert-item">
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/6Q6PBHW8AUYH">Deep Learning Specialization</a>
+                        <div class="cert-issuer">DeepLearning.AI / Coursera | Sep 2022</div>
+                    </div>
+                    <div class="cert-item">
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/MNMBXBX4RA34">TensorFlow Developer Specialization</a>
+                        <div class="cert-issuer">DeepLearning.AI / Coursera | Nov 2022</div>
+                    </div>
+                    <div class="cert-item">
+                        <a href="https://www.datacamp.com/statement-of-accomplishment/track/a9cdb364aa32f16e2011560373745426634ea540">Data Scientist With Python</a>
+                        <div class="cert-issuer">DataCamp | Nov 2021</div>
+                    </div>
+                    <div class="cert-item">
+                        <a href="https://www.datacamp.com/statement-of-accomplishment/track/ac7bad1da7ea14cb33fe4907a1d96c015f251653">Data Analyst With Python</a>
+                        <div class="cert-issuer">DataCamp | Jan 2022</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h6 class="mb-3"><strong>Education</strong></h6>
+                    <div class="cert-item">
+                        <strong>Bachelor of Mathematics</strong>
+                        <div class="cert-issuer">National Autonomous University of Mexico (UNAM) | 2017 - 2021 | GPA: 92/100</div>
+                    </div>
+                    <div class="cert-item">
+                        <strong>NLP Research Intern</strong>
+                        <div class="cert-issuer">IIMAS, UNAM | March 2022 - January 2023</div>
+                        <p style="font-size:0.85rem; color: var(--text-secondary); margin-top:4px;">Deep Learning and Reinforcement Learning algorithm design. Web scraping for NLP data collection.</p>
+                    </div>
+                    <div class="cert-item">
+                        <strong>Research Summer Residency</strong>
+                        <div class="cert-issuer">CIMAT (Research Center in Mathematics) | 2020</div>
+                    </div>
+
+                    <h6 class="mb-3 mt-4"><strong>Languages & Tests</strong></h6>
+                    <div class="cert-item">
+                        <strong>English</strong> - C1 Full Professional Proficiency (TOEFL Certified)
+                    </div>
+                    <div class="cert-item">
+                        <strong>Spanish</strong> - Native
+                    </div>
+                    <div class="cert-item">
+                        <strong>Portuguese</strong> - Currently learning
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Certifications Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
         <div class="container text-center">
-            <h6 class="subtitle"></h6>
             <h6 class="section-title mb-4">What People Say About Me</h6>
-            <p class="mb-5 pb-4"> Recommendations from people that I've worked with. Check the veracity on mi linkedin <br> </p>
+            <p class="mb-5 pb-4">Recommendations from colleagues. Verify on <a href="https://www.linkedin.com/in/isaac-hernandez-garcia-9905/" target="_blank">LinkedIn</a></p>
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -296,12 +723,9 @@
                     <div class="carousel-item active">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src="https://media.licdn.com/dms/image/D5603AQG-Kc1rqUjvBA/profile-displayphoto-shrink_100_100/0/1668706984530?e=1690416000&v=beta&t=rlNOzJau8OrOI-qc_sQSleEV3wlr90N7u4-oFn9YlX4" alt="">
-                                <p>
-                                    Isaac has a lot of intellectual curiosity, which along great bias for action, makes his contributions to the team goals innovative and with a clear and measurable impact
-                                </p>
-                                <a href="https://www.linkedin.com/in/jose-carlos-castro/"> 
-                                    <h1 class="title"> Jose Castro</h1>
+                                <p>Isaac has a lot of intellectual curiosity, which along great bias for action, makes his contributions to the team goals innovative and with a clear and measurable impact.</p>
+                                <a href="https://www.linkedin.com/in/jose-carlos-castro/">
+                                    <h1 class="title">Jose Castro</h1>
                                 </a>
                                 <h1 class="subtitle">ML Engineer @Google</h1>
                             </div>
@@ -310,9 +734,7 @@
                     <div class="carousel-item">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src="https://media.licdn.com/dms/image/C4D03AQELX4GHRJlENg/profile-displayphoto-shrink_100_100/0/1516241838071?e=1690416000&v=beta&t=YQDc-iJ6ajpFCh59_5Wql_PUtSAcGpgF8bOUUspygIM" alt="">
-                                <p>Isaac has an enormous capacity to learn and a great enthusiasm for solving problems. 
-                                    In addition, he has an excellent attitude to help other people on the team and an entrepreneurial personality. He has my highest recommendation for positions with an analytical dimension in innovative companies.</p>
+                                <p>Isaac has an enormous capacity to learn and a great enthusiasm for solving problems. In addition, he has an excellent attitude to help other people on the team and an entrepreneurial personality. He has my highest recommendation for positions with an analytical dimension in innovative companies.</p>
                                 <a href="https://www.linkedin.com/in/jmpertusa">
                                     <h1 class="title">Jose Maria Pertusa</h1>
                                 </a>
@@ -323,11 +745,7 @@
                     <div class="carousel-item">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src="https://media.licdn.com/dms/image/C4E03AQGJS9IUmeIrVA/profile-displayphoto-shrink_200_200/0/1571381421901?e=1694649600&v=beta&t=UtTQ2Gha9a11e3sz0vvpt7Zbg54VKuA0yg9uNz852Lo" alt="">
-                                <p> Isaac has shown great adaptability.
-                                    His solid technical and mathematical knowledge has helped achieve deliverables on time, in the right manner, and with high-quality standards.
-                                    His work speaks for itself, and his innovative spirit makes him stand out on his own.
-                                    I highly recommend his work. Thanks to his great analytical skills and problem-solving abilities, I'm confident he will reach the solution..</p>
+                                <p>Isaac has shown great adaptability. His solid technical and mathematical knowledge has helped achieve deliverables on time, in the right manner, and with high-quality standards. His work speaks for itself, and his innovative spirit makes him stand out. I highly recommend his work.</p>
                                 <a href="https://www.linkedin.com/in/miguel-jimenez-ulloa/">
                                     <h1 class="title">Jose Miguel Jimenez Ulloa</h1>
                                 </a>
@@ -338,19 +756,11 @@
                     <div class="carousel-item">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src=https://media.licdn.com/dms/image/D4E03AQHECJFet5Hvzw/profile-displayphoto-shrink_100_100/0/1668811014313?e=1690416000&v=beta&t=JQ5QiyB1LYdgBf_TePvlJ9bgElEjyKWVKTCeuwW8MDI alt="">
-                                <p>I have had the honor of working with Isaac Hernandez at Cargamos Mobility and have witnessed first-hand his exceptional ability to analyze data and solve problems.
-
-                                    Isaac has a strong background in mathematics and statistics and a deep understanding of various data analysis techniques, such as machine learning and natural language processing. 
-                                    In addition, he is an expert in data visualization and in creating reports and presentations to effectively communicate results and findings.
-                                    But what sets Isaac apart is his ability to think critically and creatively and find innovative solutions to complex problems; 
-                                    In short, I am sure Isaac Hernandez is a valuable asset in any work environment and I highly recommend him for any opportunity in the data science field.
-                                    
-                                </p>
+                                <p>I have had the honor of working with Isaac at Cargamos Mobility. Isaac has a strong background in mathematics and statistics and a deep understanding of various data analysis techniques. What sets Isaac apart is his ability to think critically and creatively and find innovative solutions to complex problems.</p>
                                 <a href="https://www.linkedin.com/in/santhdz-uxui/">
                                     <h1 class="title">Santiago Hernandez</h1>
                                 </a>
-                                <h1 class="subtitle">Product Designer, UX/UI Designer @BBVA</h1>
+                                <h1 class="subtitle">Product Designer @BBVA</h1>
                             </div>
                         </div>
                     </div>
@@ -358,207 +768,27 @@
             </div>
         </div>
     </section>
-    <!-- End of testmonial section -->
-        <!-- Blog Section 
-    <section id="blog" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">My Blogs</h6>
-            <h6 class="section-title mb-4">Latest News</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="row text-left">
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="./assets/imgs/blog-1.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Designe for Everyone</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="./assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Layouts</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="./assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Bootstrap Framework</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-            -->
-    <!-- Hire me section 
-    <section class="bg-gray p-0 section">
-        <div class="container">
-            <div class="card bg-primary">
-                <div class="card-body text-light">
-                    <div class="row align-items-center">
-                        <div class="col-sm-9 text-center text-sm-left">
-                            <h5 class="mt-3">Hire Me For Your Project</h5>
-                            <p class="mb-3">Accusantium labore nostrum similique quisquam.</p>
-                        </div>
-                        <div class="col-sm-3 text-center text-sm-right">
-                            <button class="btn btn-light rounded">Hire Me!</button>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </section>      
-    End od Hire me section. -->
-
-    <!-- Contact Section 
-    <section id="contact" class="position-relative section">
-        <div class="container text-center">
-            <h6 class="subtitle">Contact</h6>
-            <h6 class="section-title mb-4">Get In Touch With Me</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="contact text-left">
-                <div class="form">
-                    <h6 class="subtitle">Available 24/7</h6>
-                    <h6 class="section-title mb-4">Get In Touch</h6>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-infos">
-                    <div class="item">
-                        <i class="ti-location-pin"></i>
-                        <div class="">
-                            <h5>Location</h5>
-                            <p> 12345 Fake ST NoWhere AB Country</p>
-                        </div>                          
-                    </div>
-                    <div class="item">
-                        <i class="ti-mobile"></i>
-                        <div>
-                            <h5>Phone Number</h5>
-                            <p>(123) 456-7890</p>
-                        </div>                          
-                    </div>
-                    <div class="item">
-                        <i class="ti-email"></i>
-                        <div class="mb-0">
-                            <h5>Email Address</h5>
-                            <p>info@website.com</p>
-                        </div>
-                    </div>
-                </div>                  
-            </div>
-        </div>  
-        <div id="map">
-            <iframe src="https://snazzymaps.com/embed/61257"></iframe>
-        </div>
-    </section> -->
-    <!-- End of Contact Section --> 
-
-    <!-- Certification Section -->
-    <section id="contact" class="position-relative section">
-        <div class="container text-center">
-            <h6 class="section-title mb-4">Certifications I've Achieved</h6>
-            <div class="contact text-left">
-                <ol>
-                    <p> </p>
-                    <li> <a href="https://www.credential.net/257ddb28-b131-4b23-ac07-ebd029b271be#gs.yn8zm2">TensorFlow Developer Certificate</a> </li>  
-                    <p> </p>
-                    <li> <a href="https://">AZ-900 Microsoft Azure Fundamentals</a></li>  
-                    <p> </p>
-                    <li> <a href="https://coursera.org/share/95479c26b1e6b75b83aba2d0cb1722fb">MLOps | Machine Learning Operations (Duke university)</a> </li>  
-                    <p> </p>
-                    <li> <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/6Q6PBHW8AUYH">Deep Learning Specialization</a> </li>  
-                    <p> </p>
-                    <li> <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/MNMBXBX4RA34">DeepLearning.AI TensorFlow Developer Specialization </a></li>
-                    <p> </p>
-                    <li> <a href="https://www.datacamp.com/statement-of-accomplishment/track/a9cdb364aa32f16e2011560373745426634ea540">Data Scientist With Python</a> </li>  
-                    <p> </p>
-                    <li> <a href="https://www.datacamp.com/statement-of-accomplishment/track/ac7bad1da7ea14cb33fe4907a1d96c015f251653">Data Analyst With Python</a> </li>  
-                    <p> </p> 
-                    <li> <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/VJPG8USGPPKC">Python for Everybody</a> </li>  
-                    <p> </p>
-                    <li> <a href="https://www.coursera.org/account/accomplishments/verify/6A6O5Z22NJPF">Rust programming (In progrees)</a> </li>  
-                    <p> </p>
-                </ol>
-            </div>  
-            
-        </div> 
-
-    <!-- Certification Section End -->
-         
-    <!-- Personal Section -->
-    <section id="personal" class="position-relative section">
-        <div class="container text-center">
-            <h6 class="section-title mb-4">Wanna know a little about my hobbies?</h6>
-            <div class="personal text-left">
-                <ol>
-                    <p>  I am passionate about music and I love mixing music that i like.  </p>
-                    <a href="https://soundcloud.com/user-757517581">Hear my mixes! </a>
-                    <p> </p>
-                </ol>
-            </div>  
-        </div> 
-
-     <!-- Certification Section End -->
+    <!-- End of Testimonials section -->
 
     <!-- Page Footer -->
     <footer class="page-footer">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="" target="_blank"></a></p>
+                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; Isaac Hernandez</p>
                 </div>
                 <div class="col-sm-6">
                     <div class="socials">
-                        <!--<a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>-->
                         <a class="social-item" href="mailto:isadohergar@gmail.com"><i class="ti-email"></i></a>
                         <a class="social-item" href="https://www.linkedin.com/in/isaac-hernandez-garcia-9905/" target="_blank"><i class="ti-linkedin"></i></a>
                         <a class="social-item" href="https://github.com/axiom-of-choice" target="_blank"><i class="ti-github"></i></a>
-                        <!--<a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>-->
                     </div>
                 </div>
             </div>
         </div>
-    </footer> 
+    </footer>
     <!-- End of page footer -->
-	
+
 	<!-- core  -->
     <script src="./assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="./assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -567,8 +797,29 @@
 
     <!-- steller js -->
     <script src="./assets/js/steller.js"></script>
-    <div id="wcb" class="carbonbadge wcb-d"></div>
-    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+
+    <!-- Dark mode toggle -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateIcon(next);
+        });
+
+        function updateIcon(theme) {
+            themeIcon.className = theme === 'dark' ? 'ti-shine' : 'ti-na';
+        }
+    </script>
 
 </body>
 </html>
