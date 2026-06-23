@@ -40,6 +40,7 @@ When updating CV information:
 - **Nubank** → "Top LATAM Fintech (100M+ customers)" — https://nubank.com.br/en/
 - **Citigroup** → "Top 3 US bank, global presence in 160+ countries" — https://www.citigroup.com
 - **BBVA AI Factory** → "Largest bank in Mexico by customers" — https://www.bbvaaifactory.com
+- **Contpaqi** → "Mexico's leading accounting and enterprise software company (contabilidad, facturación electrónica, nómina, inventarios). SAT-compliant" — https://www.contpaqi.com
 - **Cargamos** → "Top 10 LinkedIn Startups Mexico"
 - **SoftServe** → "Global digital engineering company, 14K+ employees. Elite AWS/NVIDIA/Google Cloud/Microsoft partner. HQ Austin, TX" — https://www.softserveinc.com/en-us
 - **Telepatia AI** → "AI startup for healthcare, AI-assisted medical documentation" — https://www.telepatia.ai/es

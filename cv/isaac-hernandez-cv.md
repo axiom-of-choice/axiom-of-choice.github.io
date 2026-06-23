@@ -28,7 +28,7 @@ Leading, implementing, architecting and owning AI/Data projects working directly
 ### Lead AI Engineer | Contpaqi
 **September 2025 - February 2026**
 
-Led development of agentic AI solutions for accounting services.
+Mexico's leading accounting and enterprise software company. [contpaqi.com](https://www.contpaqi.com) — Led development of agentic AI solutions for accounting services.
 
 - Architected and built agents for automated invoice generation, tax status certificates, and compliance workflows
 - Integrated LLMs into existing enterprise accounting workflows
