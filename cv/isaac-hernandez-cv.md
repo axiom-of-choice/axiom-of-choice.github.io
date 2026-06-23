@@ -59,7 +59,7 @@ Top LATAM Fintech (100M+ customers).
 ### Senior Data Engineer | Citigroup
 **July 2023 - January 2024**
 
-Top bank in the US.
+Top 3 US bank, global presence in 160+ countries.
 
 - Core contributor and technical lead migrating petabyte-scale on-premise Data Lake (Hadoop/Hive) to cloud Data Lakehouse (S3, Snowflake)
 - Deployed Spark jobs in EKS clusters performing batch ingestion and transformations (dozens of TBs daily)
@@ -83,7 +83,7 @@ US-based tech startup, working with international team. [botco.ai](https://botco
 ### Senior Machine Learning Engineer | BBVA AI Factory
 **January 2023 - July 2023**
 
-Top bank in Mexico.
+Largest bank in Mexico by customers. [bbvaaifactory.com](https://www.bbvaaifactory.com)
 
 - Technical lead architecting, developing and deploying community detection and graph similarity models to prevent money laundering and fraud
 - Scalable, well-documented PySpark codebase

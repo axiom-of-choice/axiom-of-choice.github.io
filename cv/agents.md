@@ -37,15 +37,13 @@ When updating CV information:
 - **Staff AI Engineer** @ VerveMarket (June 2025 - Present)
 
 ### Company descriptors (verified)
-- **Nubank** → "Top LATAM Fintech (100M+ customers)"
-- **Citigroup** → "Top bank in the US"
-- **BBVA AI Factory** → "Top bank in Mexico"
+- **Nubank** → "Top LATAM Fintech (100M+ customers)" — https://nubank.com.br/en/
+- **Citigroup** → "Top 3 US bank, global presence in 160+ countries" — https://www.citigroup.com
+- **BBVA AI Factory** → "Largest bank in Mexico by customers" — https://www.bbvaaifactory.com
 - **Cargamos** → "Top 10 LinkedIn Startups Mexico"
-
-### Company references (include URLs)
-- Telepatia AI → https://www.telepatia.ai/es
-- SoftServe → https://www.softserveinc.com/en-us
-- Botco AI → https://botco.ai
+- **SoftServe** → "Global digital engineering company, 14K+ employees. Elite AWS/NVIDIA/Google Cloud/Microsoft partner. HQ Austin, TX" — https://www.softserveinc.com/en-us
+- **Telepatia AI** → "AI startup for healthcare, AI-assisted medical documentation" — https://www.telepatia.ai/es
+- **Botco AI** → "US-based GenAI chatbot platform for healthcare & government. RAG framework, HIPAA/SOC2 compliant" — https://botco.ai
 
 ### Languages
 - English: C1 (TOEFL Certified)
