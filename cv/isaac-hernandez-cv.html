@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac Hernandez - CV</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #222;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px 40px;
+        }
+        @media print {
+            body { padding: 15px 25px; font-size: 10px; }
+            .page-break { page-break-before: always; }
+        }
+        a { color: #1a5276; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        h1 { font-size: 22px; font-weight: 700; margin-bottom: 2px; color: #1a1a1a; }
+        h2 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 3px;
+            margin-top: 16px;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        h3 { font-size: 11.5px; font-weight: 700; margin-bottom: 1px; }
+        .header { text-align: center; margin-bottom: 12px; }
+        .header .subtitle { font-size: 13px; color: #555; margin-bottom: 6px; }
+        .header .contact { font-size: 10.5px; color: #444; }
+        .header .contact a { margin: 0 6px; }
+        .summary { font-size: 11px; color: #333; margin-bottom: 4px; }
+        .job { margin-bottom: 10px; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .job-header h3 { flex: 1; }
+        .job-date { font-size: 10px; color: #666; white-space: nowrap; }
+        .job-company { font-size: 10.5px; color: #1a5276; font-weight: 600; margin-bottom: 2px; }
+        .job-note { font-size: 10px; color: #666; font-style: italic; margin-bottom: 2px; }
+        .job ul { padding-left: 16px; margin-top: 2px; }
+        .job li { margin-bottom: 2px; }
+        .skills-grid { display: grid; grid-template-columns: 130px 1fr; gap: 3px 12px; font-size: 10.5px; }
+        .skills-grid .label { font-weight: 600; color: #2c3e50; }
+        .cert-list { list-style: none; padding: 0; }
+        .cert-list li { margin-bottom: 3px; font-size: 10.5px; }
+        .cert-list .issuer { color: #666; font-size: 10px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; }
+        .languages-list { list-style: none; padding: 0; }
+        .languages-list li { margin-bottom: 2px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Isaac Hernandez</h1>
+    <div class="subtitle">Staff AI Engineer</div>
+    <div class="contact">
+        <a href="mailto:isadohergar@gmail.com">isadohergar@gmail.com</a> |
+        <a href="https://www.linkedin.com/in/isaac-hernandez-garcia-9905/">LinkedIn</a> |
+        <a href="https://github.com/axiom-of-choice">GitHub</a> |
+        <a href="https://axiom-of-choice.github.io">Website</a>
+    </div>
+</div>
+
+<p class="summary">
+    Staff AI Engineer with 5+ years building and deploying production AI systems end-to-end — from data pipelines and model training to real-time inference on Kubernetes. Experienced shipping risk models at top LATAM fintechs, migrating petabyte-scale data lakes, and building agentic AI platforms for healthcare and e-commerce. Highly self-driven and self-managed — shaped by years in startup environments where ownership, speed, and autonomy are the norm.
+</p>
+
+<h2>Work Experience</h2>
+
+<div class="job">
+    <div class="job-header">
+        <h3>Staff AI Engineer</h3>
+        <span class="job-date">June 2025 - Present</span>
+    </div>
+    <div class="job-company">VerveMarket</div>
+    <ul>
+        <li>Leading, implementing, architecting and owning AI/Data projects working directly with the CTO</li>
+        <li>AI-assisted hybrid search engine for product discovery</li>
+        <li>AI-powered taxonomy product classification using LLM fine-tuning for NER</li>
+        <li>AI/Data infrastructure design and data pipelines for analytics and inference</li>
+    </ul>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <h3>Lead AI Engineer</h3>
+        <span class="job-date">Sep 2025 - Feb 2026</span>
+    </div>
+    <div class="job-company">Contpaqi</div>
+    <ul>
+        <li>Led development of agentic AI solutions for accounting services</li>
+        <li>Automated invoice generation, tax status certificates, and compliance workflows</li>
+    </ul>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <h3>Lead R&D Engineer in Agentic AI</h3>
+        <span class="job-date">Jul 2025 - Nov 2025</span>
+    </div>
+    <div class="job-company">SoftServe — <a href="https://www.softserveinc.com/en-us">softserveinc.com</a></div>
+    <ul>
+        <li>Led MVP development of an agentic platform for healthcare services</li>
+        <li>Automated medical form filling through OCR and STT services</li>
+        <li>Designed multi-agent orchestration for clinical document processing</li>
+    </ul>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <h3>Senior AI Engineer</h3>
+        <span class="job-date">Jun 2025 - Jul 2025</span>
+    </div>
+    <div class="job-company">Telepatia AI — <a href="https://www.telepatia.ai/es">telepatia.ai</a></div>
+    <ul>
+        <li>Led MVP of hallucination and missing information detector for AI-assisted medical form filling from transcribed appointments (STT)</li>
+    </ul>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <h3>Senior Machine Learning Engineer</h3>
+        <span class="job-date">Jan 2024 - May 2025</span>
+    </div>
+    <div class="job-company">Nubank</div>
+    <div class="job-note">Top LATAM Fintech (100M+ customers)</div>
+    <ul>
+        <li>End-to-end deployment of real-time and batch risk (underwriting) models as microservices on K8s clusters</li>
+        <li>Data integration, training, packaging, monitoring pipeline</li>
+        <li>Developed Scala-based data integrity framework to monitor sudden data changes on business metrics</li>
+    </ul>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <h3>Senior Data Engineer</h3>
+        <span class="job-date">Jul 2023 - Jan 2024</span>
+    </div>
+    <div class="job-company">Citigroup</div>
+    <div class="job-note">Top bank in the US</div>
+    <ul>
+        <li>Technical lead migrating petabyte-scale on-premise Data Lake to cloud Data Lakehouse (S3, Snowflake)</li>
+        <li>Deployed Spark jobs in EKS clusters processing dozens of TBs daily</li>
+    </ul>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <h3>AI Engineer Consultant</h3>
+        <span class="job-date">Apr 2023 - Sep 2025</span>
+    </div>
+    <div class="job-company">Botco AI — <a href="https://botco.ai">botco.ai</a></div>
+    <ul>
+        <li>Built document indexer API (FastAPI) on EKS with Vector DB (PostgreSQL) for RAG pipelines</li>
+        <li>Core contributor to web scraping microservice deployed on Kubernetes</li>
+        <li>Fine-tuned LLMs (GPT, LLaMA 2, Gemini) for QA and summarization</li>
+    </ul>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <h3>Senior Machine Learning Engineer</h3>
+        <span class="job-date">Jan 2023 - Jul 2023</span>
+    </div>
+    <div class="job-company">BBVA AI Factory</div>
+    <div class="job-note">Top bank in Mexico</div>
+    <ul>
+        <li>Technical lead for community detection and graph similarity models to prevent money laundering and fraud</li>
+        <li>ETL pipelines with PySpark, Hadoop, Kafka, Hive</li>
+    </ul>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <h3>Data Scientist</h3>
+        <span class="job-date">Nov 2021 - Nov 2022</span>
+    </div>
+    <div class="job-company">Cargamos</div>
+    <div class="job-note">Top 10 LinkedIn Startups Mexico</div>
+    <ul>
+        <li>Real-time anomaly detection (Isolation Forest) on GCP for fraud prevention</li>
+        <li>Deep CNN for automated delivery evidence image classification</li>
+        <li>Data warehouse design — improved operational success from ~80% to 97%</li>
+    </ul>
+</div>
+
+<h2>Education</h2>
+
+<div class="job">
+    <div class="job-header">
+        <h3>Bachelor of Mathematics</h3>
+        <span class="job-date">2017 - 2021</span>
+    </div>
+    <div class="job-company">National Autonomous University of Mexico (UNAM) | GPA: 92/100</div>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <h3>NLP Research Intern</h3>
+        <span class="job-date">Mar 2022 - Jan 2023</span>
+    </div>
+    <div class="job-company">IIMAS, UNAM</div>
+    <ul>
+        <li>Deep Learning and Reinforcement Learning algorithm design (PyTorch, OpenAI Baselines, Dopamine)</li>
+    </ul>
+</div>
+
+<h2>Technical Skills</h2>
+
+<div class="skills-grid">
+    <span class="label">Languages</span>
+    <span>Python, Scala, SQL, Golang, Rust (learning)</span>
+
+    <span class="label">AI/ML</span>
+    <span>PyTorch, TensorFlow (Certified), Scikit-learn, HuggingFace, vLLM, OpenAI API</span>
+
+    <span class="label">LLMs & Agents</span>
+    <span>LangGraph, Haystack, CrewAI, LlamaIndex, RAG, Fine-tuning, Prompt Engineering</span>
+
+    <span class="label">LLM Observability</span>
+    <span>Arize, LangSmith, OpenTelemetry, Guardrails</span>
+
+    <span class="label">Data Engineering</span>
+    <span>Spark (Python & Scala), Airflow, Kafka, Hadoop, Hive, dbt</span>
+
+    <span class="label">AWS</span>
+    <span>S3, DynamoDB, RDS, Step Functions, SageMaker, Athena, Glue, EC2, ECS, EKS, Redshift, Lambda</span>
+
+    <span class="label">GCP</span>
+    <span>BigQuery, VertexAI, Dataflow, GKE, DataProc, App Engine</span>
+
+    <span class="label">Azure</span>
+    <span>AZ-900 Certified, Data Factory, Synapse Analytics, Databricks</span>
+
+    <span class="label">Databases</span>
+    <span>PostgreSQL, MySQL, MongoDB, Snowflake, Pinecone, Redis</span>
+
+    <span class="label">Infrastructure</span>
+    <span>Docker, Kubernetes, CI/CD (GitHub Actions, GitLab CI, BitBucket)</span>
+
+    <span class="label">MLOps</span>
+    <span>MLFlow, Airflow, dbt Cloud, Grafana, ElasticStack</span>
+</div>
+
+<h2>Certifications</h2>
+
+<ul class="cert-list">
+    <li><strong>TensorFlow Developer Certificate</strong> <span class="issuer">— Google (May 2023)</span></li>
+    <li><strong>Apache Airflow Fundamentals</strong> <span class="issuer">— Astronomer (Nov 2023)</span></li>
+    <li><strong>Microsoft Azure Fundamentals (AZ-900)</strong> <span class="issuer">— Microsoft (Dec 2021)</span></li>
+    <li><strong>MLOps Specialization</strong> <span class="issuer">— Duke University / Coursera</span></li>
+    <li><strong>Deep Learning Specialization</strong> <span class="issuer">— DeepLearning.AI / Coursera (Sep 2022)</span></li>
+    <li><strong>TensorFlow Developer Specialization</strong> <span class="issuer">— DeepLearning.AI / Coursera (Nov 2022)</span></li>
+    <li><strong>Data Scientist With Python</strong> <span class="issuer">— DataCamp (Nov 2021)</span></li>
+</ul>
+
+<h2>Languages</h2>
+
+<ul class="languages-list">
+    <li><strong>English:</strong> C1 Full Professional Proficiency (TOEFL Certified)</li>
+    <li><strong>Spanish:</strong> Native</li>
+    <li><strong>Portuguese:</strong> Currently learning</li>
+</ul>
+
+</body>
+</html>
