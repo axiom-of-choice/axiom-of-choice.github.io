@@ -8,9 +8,11 @@ isadohergar@gmail.com | [LinkedIn](https://www.linkedin.com/in/isaac-hernandez-g
 
 ## Summary
 
-Staff AI Engineer with 5+ years building and deploying production AI systems end-to-end — from data pipelines and model training to real-time inference on Kubernetes. Experienced shipping risk models at top LATAM fintechs, migrating petabyte-scale data lakes, and building agentic AI platforms for healthcare and e-commerce.
+Staff AI Engineer who owns AI initiatives end-to-end — scoping the problem, designing the architecture, shipping to production, and measuring impact. I operate as a technical leader and force multiplier: making architectural bets, setting engineering standards, unblocking teams, and driving projects from zero-to-one.
 
-Mathematics degree with strong fundamentals in ML theory, distributed systems, and software engineering. Highly self-driven and self-managed — shaped by years in startup environments where ownership, speed, and autonomy are the norm.
+Led cross-functional delivery across healthcare, fintech, and e-commerce — working directly with CTOs and stakeholders to define what to build, not just how to build it. Track record of taking full ownership of AI/Data strategy at early-stage companies and delivering production systems at top LATAM fintechs serving tens of millions of users.
+
+Mathematics degree with strong fundamentals in ML theory, distributed systems, and software engineering. Shaped by years in high-autonomy environments where ownership, speed, and sound technical judgment define success.
 
 ---
 
@@ -19,86 +21,85 @@ Mathematics degree with strong fundamentals in ML theory, distributed systems, a
 ### Staff AI Engineer | VerveMarket
 **June 2025 - Present**
 
-AI-powered grocery delivery platform personalized by dietary needs. [shop.vervemarket.com](https://shop.vervemarket.com) — Leading, implementing, architecting and owning AI/Data projects working directly with the CTO.
+AI-powered grocery delivery platform personalized by dietary needs. [shop.vervemarket.com](https://shop.vervemarket.com) — Own all AI/Data strategy and execution, reporting directly to CTO.
 
-- AI-assisted hybrid search engine for product discovery
-- AI-powered taxonomy product classification using LLM fine-tuning for NER
-- AI/Data infrastructure design and data pipelines for analytics and inference
+- Defined and delivered the product search experience end-to-end — hybrid semantic + keyword engine that became the core discovery mechanism, driving [X%] improvement in add-to-cart conversions
+- Scoped, designed, and shipped product classification pipeline (LLM fine-tuning for NER), automating what was previously a manual cataloging process
+- Established the company's AI/Data infrastructure from scratch: pipelines, model serving, inference APIs — setting architectural standards for all future AI work
 
 ### Lead AI Engineer | Contpaqi
 **September 2025 - February 2026**
 
-Mexico's leading accounting and enterprise software company. [contpaqi.com](https://www.contpaqi.com) — Led development of agentic AI solutions for accounting services.
+Mexico's leading accounting and enterprise software company. [contpaqi.com](https://www.contpaqi.com) — Led the AI product initiative from concept to production, defining technical direction and driving delivery.
 
-- Architected and built agents for automated invoice generation, tax status certificates, and compliance workflows
-- Integrated LLMs into existing enterprise accounting workflows
+- Owned end-to-end architecture and delivery of multi-tool agents automating invoice generation, tax status certificates, and compliance workflows — reducing manual accounting tasks from hours to minutes
+- Made build-vs-buy decisions for LLM integrations and designed the service layer connecting agents to existing enterprise APIs
 
 ### Lead R&D Engineer in Agentic AI | SoftServe
 **July 2025 - November 2025**
 
-[softserveinc.com](https://www.softserveinc.com/en-us) — Led MVP development of an agentic platform for healthcare services.
+[softserveinc.com](https://www.softserveinc.com/en-us) — Drove an agentic AI platform for healthcare from zero to production MVP.
 
-- Automated medical form filling through OCR and STT services
-- Designed multi-agent orchestration for clinical document processing
-- Delivered working MVP to production within tight timelines
+- Owned technical architecture and delivery: multi-agent orchestration integrating OCR, STT, and LLM services for clinical document processing
+- Defined integration patterns and standards for connecting agents to external healthcare APIs
+- Delivered production MVP in under 4 months, establishing the reference architecture for future agent projects
 
 ### Senior AI Engineer | Telepatia AI
 **June 2025 - July 2025**
 
-[telepatia.ai](https://www.telepatia.ai/es) — Led MVP development of hallucination and missing information detector for AI-assisted medical form filling from transcribed medical appointments (STT).
+[telepatia.ai](https://www.telepatia.ai/es) — Owned end-to-end delivery of a hallucination and missing information detector for AI-assisted medical form filling from transcribed appointments (STT). Scoped the problem, defined the approach, and shipped a working product in under 5 weeks.
 
 ### Senior Machine Learning Engineer | Nubank
 **January 2024 - May 2025**
 
 Largest digital bank in LATAM, 130M+ customers across Brazil, Mexico, and Colombia. [nubank.com.br](https://nubank.com.br/en/)
 
-- End-to-end deployment of real-time and batch risk (underwriting) models: data integration, training, packaging, integration, and monitoring as microservices on K8s clusters
-- Developed a Scala-based data integrity framework to monitor sudden data changes on business metrics datasets
-- Worked across multiple squads in a high-scale, high-quality engineering culture
+- Owned the full model lifecycle for underwriting risk models serving millions of credit decisions — from data integration and training through production deployment and monitoring on K8s
+- Designed and shipped a Scala-based data integrity framework adopted across teams to detect sudden shifts in business metrics datasets
+- Operated autonomously across multiple squads, trusted to drive delivery end-to-end in a high-scale engineering culture
 
 ### Senior Data Engineer | Citigroup
 **July 2023 - January 2024**
 
 Top 3 US bank, global presence in 160+ countries. [citigroup.com](https://www.citigroup.com)
 
-- Core contributor and technical lead migrating petabyte-scale on-premise Data Lake (Hadoop/Hive) to cloud Data Lakehouse (S3, Snowflake)
-- Deployed Spark jobs in EKS clusters performing batch ingestion and transformations (dozens of TBs daily)
-- Standardized data pipelines across multiple business lines
+- Technical lead for petabyte-scale Data Lake migration (Hadoop/Hive → S3/Snowflake), defining the migration strategy and driving execution across teams
+- Owned Spark job design and deployment on EKS clusters processing dozens of TBs daily
+- Established standardized pipeline patterns adopted across multiple business lines
 
 ### AI Engineer Consultant | Botco AI
 **April 2023 - September 2025**
 
 US-based tech startup, working with international team. [botco.ai](https://botco.ai)
 
-- Core contributor to web scraping microservice (Python) deployed on Kubernetes EKS cluster
-- Built document indexer API (HTML, PDF, Docx) with FastAPI as microservice in EKS, storing indexed docs into Vector DB (PostgreSQL) for RAG
-- Fine-tuned LLMs (GPT, LLaMA 2, Gemini) for QA and document summarization tasks
+- Owned the data extraction platform: designed, built, and maintained the web scraping microservice (Python/K8s) powering the company's content ingestion
+- Architected and shipped document indexer API (HTML, PDF, Docx) with vector storage (PostgreSQL/pgvector) — the foundation of the RAG pipeline serving all chatbot customers
+- Drove LLM fine-tuning strategy (GPT, LLaMA 2, Gemini) for QA and summarization, improving answer quality across the product
 
 ### AI Engineer Consultant | Fundamentl Partners
 **June 2023 - October 2023**
 
-- End-to-end development of Generative QA and summarization product
-- Indexed private data into Vector DB and used LLMs to generate answers from knowledge base
+- Owned end-to-end delivery of a Generative QA and summarization product — from problem scoping through production deployment
+- Designed the retrieval architecture: private data indexing into Vector DB with LLM-powered answer generation from the knowledge base
 
 ### Senior Machine Learning Engineer | BBVA AI Factory
 **January 2023 - July 2023**
 
 Largest bank in Mexico by customers. [bbvaaifactory.com](https://www.bbvaaifactory.com)
 
-- Technical lead architecting, developing and deploying community detection and graph similarity models to prevent money laundering and fraud
-- Scalable, well-documented PySpark codebase
-- ETL pipelines development for analytics with Big Data tools (PySpark, Hadoop, Kafka, Hive)
-- Monitoring, evaluation and retraining of ML models
+- Technical lead for anti-money-laundering detection system: architected and deployed graph-based community detection and similarity models processing millions of transactions
+- Set engineering standards for the team's PySpark codebase — scalability, documentation, and code review practices
+- Owned ETL pipeline design and ML model lifecycle: monitoring, evaluation, and retraining across Big Data stack (PySpark, Hadoop, Kafka, Hive)
 
 ### Data Scientist | Cargamos
 **November 2021 - November 2022**
 
 Tech/Logistics startup based in Mexico. Ranked in Top 10 LinkedIn Startups.
 
-- Designed, built, and deployed real-time anomaly detection (Isolation Forest) on GCP to prevent fraud and theft
-- Maintained Deep CNN model for automated delivery evidence image classification
-- ETL/ELT pipelines with PySpark, data warehouse design improving data availability company-wide
-- Analytics manager supporting finance and operations — improved operational success from ~80% to 97%
+- Owned the fraud prevention system end-to-end: designed, built, and deployed real-time anomaly detection (Isolation Forest) on GCP
+- Drove operational success rate from ~80% to 97% — owned analytics for finance and operations, directly influencing company-wide decisions
+- Designed the data warehouse architecture and ETL/ELT pipelines (PySpark), improving data availability across all teams
+- Maintained Deep CNN model for automated delivery evidence classification
 
 ---
 
@@ -122,11 +123,13 @@ Advanced research topics in multiple fields of mathematics at the Research Cente
 
 ## Technical Skills
 
-**Languages:** Python, Scala, SQL, Golang (learning), Rust (learning)
+**Languages:** Python, Scala, SQL, Golang (familiar), Rust (familiar)
 
 **AI/ML:** PyTorch, TensorFlow (Certified Developer), Scikit-learn, HuggingFace, vLLM, OpenAI API
 
-**LLMs & Agents:** LangGraph, Haystack, CrewAI, LlamaIndex, RAG, Fine-tuning, Prompt Engineering
+**LLMs & Agents:** LangGraph, LlamaIndex, CrewAI, Haystack, MCP Servers, RAG, Fine-tuning, Prompt Engineering
+
+**Integrations & APIs:** FastAPI, Flask, REST APIs, GraphQL, Web Scraping, Data Extraction Pipelines
 
 **LLM Observability:** Arize, LangSmith, OpenTelemetry, Guardrails
 
@@ -143,8 +146,6 @@ Advanced research topics in multiple fields of mathematics at the Research Cente
 **Infrastructure:** Docker, Kubernetes, CI/CD (GitHub Actions, GitLab CI, BitBucket Pipelines)
 
 **MLOps:** MLFlow, Airflow, dbt Cloud, Grafana, ElasticStack
-
-**Other:** FastAPI, Flask, REST APIs, GraphQL, Data Modeling, Data Quality, Data Governance
 
 ---
 
@@ -172,9 +173,8 @@ Advanced research topics in multiple fields of mathematics at the Research Cente
 
 ## Soft Skills
 
-- Data-driven decision making
-- Stakeholder management & product sense
-- Storytelling & business intelligence
-- Agile methodologies & goal-oriented execution
-- Fast learner, proactive, and team-oriented
+- Technical leadership: architecture reviews, engineering standards, unblocking teams
+- Data-driven decision making & stakeholder management
+- End-to-end project ownership — scoping, delivery, and post-launch iteration
 - Cross-functional and international team collaboration
+- Fast learner, proactive, and autonomous in high-ambiguity environments
