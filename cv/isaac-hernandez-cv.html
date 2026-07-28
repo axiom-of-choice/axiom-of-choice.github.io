@@ -212,6 +212,7 @@
 
 <div class="job">
     <ul>
+        <li><strong>mlx-community (Apple Silicon quantization)</strong> — Published 4/6/8-bit MLX conversions of a 4.5B agentic VLM, each evaluated against the unquantized bf16 source across four layers: distributional fidelity (perplexity ratio, top-1 agreement, KL divergence), generation agreement, task accuracy, and blind pairwise LLM-judge quality with position swapping and SEM reported. Showed all variants are statistically indistinguishable on judged quality while BLEU-vs-source spans 49.5–82.7 — demonstrating why output-similarity metrics misrank quantized models. 4-bit runs 3.3x faster at 2.5x less memory (<a href="https://huggingface.co/mlx-community/AREX-Turbo-4bit">models</a> · <a href="https://github.com/axiom-of-choice/mlx-contributing">method &amp; results</a>)</li>
         <li><strong>vLLM (GGUF plugin)</strong> — Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying the Triton and CUDA dequantization backends handle bf16 output correctly (<a href="https://github.com/vllm-project/vllm-gguf-plugin/pull/73">PR #73</a>)</li>
         <li><strong>langchain-searchapi</strong> — Authored and published a standalone LangChain integration package (<a href="https://pypi.org/project/langchain-searchapi/">PyPI</a>) for SearchApi.io: multi-engine search tool with dynamic engine selection, RAG retriever, and full async support</li>
         <li><strong>CrewAI</strong> — Contributed <code>SearchApiSearchTool</code>, a multi-engine search tool (Google, YouTube, Bing, Baidu, and more) with dynamic engine switching for agent workflows (<a href="https://github.com/crewAIInc/crewAI/pull/6434">PR #6434</a>)</li>
@@ -254,7 +255,10 @@
     <span>PyTorch, TensorFlow (Certified), Scikit-learn, HuggingFace, OpenAI API</span>
 
     <span class="label">LLM Serving &amp; Optimization</span>
-    <span>vLLM, TGI, Ollama, quantization (GGUF, MLX), LoRA / QLoRA, batch &amp; real-time inference</span>
+    <span>vLLM, TGI, Ollama, MLX, quantization (GGUF, MLX — published to mlx-community), LoRA / QLoRA, batch &amp; real-time inference</span>
+
+    <span class="label">Evaluation</span>
+    <span>LLM-as-judge (pairwise, position-swapped, calibrated), statistical significance testing, perplexity / KL divergence / top-1 agreement, task-accuracy harnesses, offline &amp; online eval pipelines</span>
 
     <span class="label">LLMs & Agents</span>
     <span>LangGraph, Haystack, CrewAI, LlamaIndex, MCP (servers &amp; clients), RAG, Fine-tuning, Prompt Engineering</span>

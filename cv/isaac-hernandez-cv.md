@@ -113,6 +113,7 @@ Tech/Logistics startup based in Mexico. Ranked in Top 10 LinkedIn Startups.
 
 ## Open Source Contributions
 
+- **mlx-community (Apple Silicon quantization)** — Published 4/6/8-bit MLX conversions of a 4.5B agentic VLM, each evaluated against the unquantized bf16 source across four measurement layers: distributional fidelity (perplexity ratio, top-1 agreement, KL divergence), generation agreement, task accuracy, and blind pairwise LLM-judge quality with position swapping and SEM reported. Established that all variants are statistically indistinguishable on judged quality while BLEU-vs-source spans 49.5–82.7 — demonstrating why output-similarity metrics misrank quantized models. 4-bit runs 3.3x faster at 2.5x less memory. [Models](https://huggingface.co/mlx-community/AREX-Turbo-4bit) · [Method & results](https://github.com/axiom-of-choice/mlx-contributing)
 - **vLLM (GGUF plugin)** — Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying both the Triton and CUDA dequantization backends handle bf16 output correctly. [PR #73](https://github.com/vllm-project/vllm-gguf-plugin/pull/73)
 - **langchain-searchapi** — Authored and published a standalone LangChain integration package (PyPI) for SearchApi.io: multi-engine search tool with dynamic engine selection, a RAG retriever, and full async support. [PyPI](https://pypi.org/project/langchain-searchapi/) · [Code](https://github.com/axiom-of-choice/langchain-searchapi)
 - **CrewAI** — Contributed `SearchApiSearchTool`, a multi-engine search tool (Google, YouTube, Bing, Baidu, and more) enabling dynamic engine switching within agent workflows. [PR #6434](https://github.com/crewAIInc/crewAI/pull/6434)
@@ -148,7 +149,9 @@ Advanced research topics in multiple fields of mathematics at the Research Cente
 
 **AI/ML:** PyTorch, TensorFlow (Certified Developer), Scikit-learn, HuggingFace, OpenAI API
 
-**LLM Serving & Optimization:** vLLM, TGI, Ollama, quantization (GGUF, MLX), LoRA / QLoRA, batch & real-time inference
+**LLM Serving & Optimization:** vLLM, TGI, Ollama, MLX, quantization (GGUF, MLX — published to mlx-community), LoRA / QLoRA, batch & real-time inference
+
+**Evaluation:** LLM-as-judge (pairwise, position-swapped, calibrated), statistical significance testing, perplexity / KL divergence / top-1 agreement, task-accuracy harnesses, offline & online eval pipelines
 
 **LLMs & Agents:** LangGraph, LlamaIndex, CrewAI, Haystack, MCP (servers & clients), RAG, Fine-tuning, Prompt Engineering
 

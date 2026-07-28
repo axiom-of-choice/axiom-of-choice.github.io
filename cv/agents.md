@@ -59,7 +59,8 @@ When updating CV information:
 - Python, Scala, SQL, Golang
 - PyTorch, TensorFlow (Certified Developer)
 - LLMs & Agents: LangGraph, Haystack, CrewAI, LlamaIndex, MCP (servers & clients)
-- LLM Serving & Optimization: vLLM, TGI, Ollama, quantization (GGUF, MLX), LoRA / QLoRA
+- LLM Serving & Optimization: vLLM, TGI, Ollama, MLX, quantization (GGUF, MLX — published to mlx-community), LoRA / QLoRA
+- Evaluation: LLM-as-judge (pairwise, position-swapped), statistical significance testing, perplexity / KL / top-1 agreement, offline & online eval pipelines
 - Vector DBs & Retrieval: pgvector, Pinecone, Qdrant, Weaviate, Milvus, Chroma, FAISS, embeddings, hybrid search, reranking
 - LLM Observability: Arize, LangSmith, OpenTelemetry, Guardrails
 - RAG, Fine-tuning, HuggingFace, OpenAI API

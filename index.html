@@ -538,7 +538,13 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">LLM Serving (vLLM, TGI, Ollama, quantization)</h6>
+                    <h6 class="mb-3">LLM Serving (vLLM, TGI, Ollama, MLX, quantization)</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">Evals (LLM-as-judge, significance testing, KL / perplexity)</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
                     </div>
@@ -697,6 +703,20 @@
             <p class="mb-5 pb-4 text-center">Active contributor to major AI/ML frameworks and tools</p>
 
             <div class="row">
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>mlx-community — Quantized Model Releases</h5>
+                        <p class="project-desc">Published 4/6/8-bit MLX conversions of a 4.5B agentic VLM for Apple Silicon, each evaluated against the unquantized bf16 source across four layers: distributional fidelity (perplexity ratio, top-1 agreement, KL divergence), generation agreement, task accuracy, and blind pairwise LLM-judge quality with position swapping and SEM reported. All variants proved statistically indistinguishable on judged quality while BLEU-vs-source spanned 49.5–82.7 — showing why output-similarity metrics misrank quantized models. 4-bit runs 3.3x faster at 2.5x less memory.</p>
+                        <span class="tech-badge">Quantization</span>
+                        <span class="tech-badge">MLX</span>
+                        <span class="tech-badge">Eval Methodology</span>
+                        <span class="tech-badge">LLM-as-Judge</span>
+                        <div class="project-links mt-3">
+                            <a href="https://huggingface.co/mlx-community/AREX-Turbo-4bit" target="_blank"><i class="ti-package"></i> Models</a>
+                            <a href="https://github.com/axiom-of-choice/mlx-contributing" target="_blank"><i class="ti-github"></i> Method &amp; Results</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>vLLM — GGUF Plugin</h5>
