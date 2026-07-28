@@ -10,9 +10,9 @@ isadohergar@gmail.com | [LinkedIn](https://www.linkedin.com/in/isaac-hernandez-g
 
 Staff AI Engineer who owns AI initiatives end-to-end — scoping the problem, designing the architecture, shipping to production, and measuring impact. I operate as a technical leader and force multiplier: making architectural bets, setting engineering standards, unblocking teams, and driving projects from zero-to-one.
 
-Led cross-functional delivery across healthcare, fintech, and e-commerce — working directly with CTOs and stakeholders to define what to build, not just how to build it. Track record of taking full ownership of AI/Data strategy at early-stage companies and delivering production systems at top LATAM fintechs serving tens of millions of users.
+Led cross-functional delivery across healthcare, fintech, and e-commerce — working directly with CTOs and stakeholders to define what to build, not just how to build it. Track record of taking full ownership of AI/Data strategy at early-stage startups and delivering production systems at top LATAM fintechs serving tens of millions of users. Have worked extensively with international, distributed teams across the US and LATAM.
 
-Mathematics degree with strong fundamentals in ML theory, distributed systems, and software engineering. Shaped by years in high-autonomy environments where ownership, speed, and sound technical judgment define success.
+Mathematics degree with strong fundamentals in ML theory, distributed systems, and software engineering. Shaped by years in early-stage startups and other high-autonomy environments where ownership, speed, and sound technical judgment define success.
 
 ---
 
