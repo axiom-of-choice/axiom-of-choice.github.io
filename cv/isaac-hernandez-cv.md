@@ -24,6 +24,7 @@ Mathematics degree with strong fundamentals in ML theory, distributed systems, a
 AI-powered grocery delivery platform personalized by dietary needs. [shop.vervemarket.com](https://shop.vervemarket.com) — Own all AI/Data strategy and execution, reporting directly to CTO.
 
 - Defined and delivered the product search experience end-to-end — hybrid semantic + keyword engine combining vector similarity (embeddings + reranking) with lexical retrieval, which became the core discovery mechanism, driving a 27% improvement in add-to-cart conversion; serves ~100K multi-retailer (multi-tenant) requests/day at ~1s p95
+- Shipped a customer-facing autonomous agent embedded in the e-commerce product — plans and executes multi-step tasks through multi-turn tool use for meal planning, cart building, and dietary profile tuning, acting directly on the live catalog and the shopper's cart
 - Scoped, designed, and shipped product classification pipeline (LLM fine-tuning for NER), fully automating a previously manual cataloging process across 500K+ products — eliminating 100% of manual cataloging
 - Established the company's AI/Data infrastructure from scratch: pipelines, model serving, inference APIs, vector store, and MCP servers exposing internal tools to agents — setting architectural standards for all future AI work
 - Scaled LLM inference serving for production (vLLM, TGI), handling real-time and batch inference across text and multimodal models including image generation pipelines
