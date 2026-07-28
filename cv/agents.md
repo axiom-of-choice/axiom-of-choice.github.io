@@ -58,12 +58,14 @@ When updating CV information:
 ### Key skills to always mention
 - Python, Scala, SQL, Golang
 - PyTorch, TensorFlow (Certified Developer)
-- LLMs & Agents: LangGraph, Haystack, CrewAI, LlamaIndex
+- LLMs & Agents: LangGraph, Haystack, CrewAI, LlamaIndex, MCP (servers & clients)
+- LLM Serving & Optimization: vLLM, TGI, Ollama, quantization (GGUF, MLX), LoRA / QLoRA
+- Vector DBs & Retrieval: pgvector, Pinecone, Qdrant, Weaviate, Milvus, Chroma, FAISS, embeddings, hybrid search, reranking
 - LLM Observability: Arize, LangSmith, OpenTelemetry, Guardrails
-- RAG, Fine-tuning, vLLM, HuggingFace, OpenAI API
+- RAG, Fine-tuning, HuggingFace, OpenAI API
 - AWS, GCP, Azure (AZ-900)
 - Docker, Kubernetes, Spark, Airflow, Kafka
-- Snowflake, PostgreSQL, MongoDB, Pinecone
+- Snowflake, PostgreSQL, MongoDB
 
 ### Tone & messaging
 - "Highly self-driven and self-managed — shaped by startup environments"

@@ -377,10 +377,12 @@
                         <h5>Staff AI Engineer</h5>
                         <span class="company">VerveMarket</span>
                         <div class="date">June 2025 - Present</div>
-                        <p>Own all AI/Data strategy and execution, reporting directly to CTO — setting the company-wide model/architecture roadmap and infra standards. Defined and delivered the product search experience end-to-end — hybrid semantic + keyword engine driving a 27% add-to-cart conversion improvement, serving ~100K multi-tenant requests/day at ~1s p95. Automated product cataloging across 500K+ products via LLM fine-tuning for NER. Scaled LLM inference serving for production across text and multimodal models including image generation. Built evaluation infrastructure with deterministic, statistical, and LLM-as-judge pipelines — cutting the manual QA cycle from days to minutes.</p>
+                        <p>Own all AI/Data strategy and execution, reporting directly to CTO — setting the company-wide model/architecture roadmap and infra standards. Defined and delivered the product search experience end-to-end — hybrid engine combining vector similarity (embeddings + reranking) with keyword retrieval, driving a 27% add-to-cart conversion improvement, serving ~100K multi-tenant requests/day at ~1s p95. Automated product cataloging across 500K+ products via LLM fine-tuning for NER. Established the AI infrastructure from scratch, including the vector store and MCP servers exposing internal tools to agents. Scaled LLM inference serving for production across text and multimodal models including image generation. Built evaluation infrastructure with deterministic, statistical, and LLM-as-judge pipelines — cutting the manual QA cycle from days to minutes.</p>
                         <span class="tech-badge">LLMs</span>
                         <span class="tech-badge">NER</span>
-                        <span class="tech-badge">Search</span>
+                        <span class="tech-badge">Hybrid Search</span>
+                        <span class="tech-badge">Vector DB</span>
+                        <span class="tech-badge">MCP</span>
                         <span class="tech-badge">Data Pipelines</span>
                         <span class="tech-badge">vLLM</span>
                         <span class="tech-badge">Multimodal</span>
@@ -395,9 +397,11 @@
                         <h5>Lead AI Engineer (Contract)</h5>
                         <span class="company">Contpaqi</span>
                         <div class="date">September 2025 - February 2026</div>
-                        <p>Led the AI product initiative from concept to production. Owned end-to-end architecture and delivery of multi-tool agents automating invoice generation, tax certificates, and compliance — cutting task turnaround from ~2 hours to under 10 minutes (~90% reduction).</p>
+                        <p>Led the AI product initiative from concept to production. Owned end-to-end architecture and delivery of multi-tool agents automating invoice generation, tax certificates, and compliance — cutting task turnaround from ~2 hours to under 10 minutes (~90% reduction). Designed and deployed MCP servers exposing enterprise APIs as agent tools, plus the agent host consuming them as MCP clients. Ran self-hosted inference (Ollama) for on-premise processing of sensitive financial data.</p>
                         <span class="tech-badge">Agents</span>
                         <span class="tech-badge">LLMs</span>
+                        <span class="tech-badge">MCP</span>
+                        <span class="tech-badge">Ollama</span>
                         <span class="tech-badge">Automation</span>
                     </div>
 
@@ -405,11 +409,13 @@
                         <h5>Lead R&D Engineer in Agentic AI (Contract)</h5>
                         <span class="company">SoftServe</span>
                         <div class="date">July 2025 - November 2025</div>
-                        <p>Drove an agentic AI platform for healthcare from zero to production MVP. Owned technical architecture: multi-agent orchestration integrating OCR, STT, and LLM services — reaching ~92% field extraction accuracy and cutting manual data entry by ~70%. Delivered in under 4 months.</p>
+                        <p>Drove an agentic AI platform for healthcare from zero to production MVP. Owned technical architecture: multi-agent orchestration integrating OCR, STT, and LLM services — reaching ~92% field extraction accuracy and cutting manual data entry by ~70%. Built MCP servers for the healthcare API tool layer and the multi-agent host acting as MCP client, with self-hosted inference (Ollama) keeping protected health information inside the client's infrastructure. Delivered in under 4 months.</p>
                         <span class="tech-badge">Healthcare AI</span>
                         <span class="tech-badge">OCR</span>
                         <span class="tech-badge">STT</span>
                         <span class="tech-badge">Agents</span>
+                        <span class="tech-badge">MCP</span>
+                        <span class="tech-badge">Ollama</span>
                     </div>
 
                     <div class="experience-item">
@@ -451,9 +457,11 @@
                         <h5>AI Engineer (Contract)</h5>
                         <span class="company">Botco AI</span>
                         <div class="date">April 2023 - September 2025</div>
-                        <p>Reported directly to the CTO and VP of Engineering. Owned the data extraction platform powering content ingestion — scraping ~100K pages/week. Architected and shipped a document indexer API — the foundation of the RAG pipeline, indexing 1M+ documents at ~200ms p95 retrieval latency and serving 10+ customer chatbots across web app and Facebook. Drove LLM fine-tuning strategy (GPT, LLaMA, Gemini), improving answer relevance by ~30%.</p>
+                        <p>Reported directly to the CTO and VP of Engineering. Owned the data extraction platform powering content ingestion — scraping ~100K pages/week. Architected and shipped a document indexer API with vector storage (PostgreSQL/pgvector) — the foundation of the RAG pipeline, indexing 1M+ documents at ~200ms p95 retrieval latency and serving 10+ customer chatbots across web app and Facebook. Exposed retrieval and ingestion as MCP servers so agents could consume document search as a standard tool interface. Drove LLM fine-tuning strategy (GPT, LLaMA, Gemini), improving answer relevance by ~30%.</p>
                         <span class="tech-badge">RAG</span>
                         <span class="tech-badge">LLMs</span>
+                        <span class="tech-badge">pgvector</span>
+                        <span class="tech-badge">MCP</span>
                         <span class="tech-badge">FastAPI</span>
                         <span class="tech-badge">K8s</span>
                     </div>
@@ -516,13 +524,25 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">LLMs / Agents (LangGraph, Haystack, CrewAI, LlamaIndex)</h6>
+                    <h6 class="mb-3">LLMs / Agents (LangGraph, Haystack, CrewAI, LlamaIndex, MCP)</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><span>92%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">RAG / NLP / Fine-tuning (HuggingFace, vLLM, OpenAI)</h6>
+                    <h6 class="mb-3">RAG / NLP / Fine-tuning (HuggingFace, LoRA / QLoRA, OpenAI)</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">LLM Serving (vLLM, TGI, Ollama, quantization)</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6 class="mb-3">Vector DBs &amp; Retrieval (pgvector, Pinecone, Qdrant, hybrid search)</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
                     </div>
@@ -946,7 +966,7 @@
                 'AI Engineer',
                 'Building production agentic AI systems at scale',
                 'ML Engineer',
-                'LLMs | RAG | Agents | MLOps | Distributed Systems',
+                'LLMs | RAG | Agents | MCP | Inference Serving | MLOps',
                 'Data Engineer'
             ],
             typeSpeed: 50,

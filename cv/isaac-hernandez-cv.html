@@ -88,9 +88,9 @@
     <div class="job-note">AI-powered grocery delivery platform personalized by dietary needs</div>
     <ul>
         <li>Leading, implementing, architecting and owning AI/Data projects working directly with the CTO</li>
-        <li>AI-assisted hybrid search engine for product discovery — drove a 27% improvement in add-to-cart conversion; serves ~100K multi-retailer (multi-tenant) requests/day at ~1s p95</li>
+        <li>AI-assisted hybrid search engine for product discovery, combining vector similarity (embeddings + reranking) with lexical retrieval — drove a 27% improvement in add-to-cart conversion; serves ~100K multi-retailer (multi-tenant) requests/day at ~1s p95</li>
         <li>AI-powered taxonomy product classification using LLM fine-tuning for NER — fully automated cataloging across 500K+ products, eliminating 100% of manual cataloging</li>
-        <li>AI/Data infrastructure design and data pipelines for analytics and inference</li>
+        <li>AI/Data infrastructure design from scratch: data pipelines, model serving, vector store, and MCP servers exposing internal tools to agents</li>
         <li>Production LLM inference serving (vLLM, TGI) for real-time and batch workloads across text and multimodal models including image generation</li>
         <li>Evaluation infrastructure for LLM services: deterministic metrics, statistical significance testing, and LLM-as-judge pipelines for batch and real-time serving — cut the manual QA cycle from days to minutes</li>
         <li>Set AI/Data technical direction company-wide — owned the model/architecture roadmap and defined the build-vs-buy and infra standards every AI project builds against</li>
@@ -107,6 +107,8 @@
     <ul>
         <li>Led development of agentic AI solutions for accounting services</li>
         <li>Automated invoice generation, tax status certificates, and compliance workflows — cut task turnaround from ~2 hours to under 10 minutes (~90% reduction)</li>
+        <li>Designed and deployed MCP servers exposing enterprise APIs as agent tools, plus the agent host consuming them as MCP clients — decoupled tool integrations from agent logic</li>
+        <li>Self-hosted LLM inference (Ollama) for workloads requiring on-premise processing of sensitive financial data</li>
     </ul>
 </div>
 
@@ -120,6 +122,8 @@
         <li>Led MVP development of an agentic platform for healthcare services</li>
         <li>Automated medical form filling through OCR and STT services — cut manual data entry by ~70%</li>
         <li>Designed multi-agent orchestration for clinical document processing — reached ~92% field extraction accuracy</li>
+        <li>Built MCP servers for the healthcare API tool layer and the multi-agent host acting as MCP client</li>
+        <li>Deployed self-hosted LLM inference (Ollama) to keep protected health information within the client's infrastructure boundary</li>
     </ul>
 </div>
 
@@ -169,7 +173,8 @@
     <div class="job-company">Botco AI — <a href="https://botco.ai">botco.ai</a></div>
     <div class="job-note">US-based tech startup — reported directly to the CTO and VP of Engineering</div>
     <ul>
-        <li>Built document indexer API (FastAPI) on EKS with Vector DB (PostgreSQL) for RAG pipelines — indexed 1M+ documents at ~200ms p95 retrieval latency, serving 10+ customer chatbots across web app and Facebook</li>
+        <li>Built document indexer API (FastAPI) on EKS with vector storage (PostgreSQL/pgvector) for RAG pipelines — indexed 1M+ documents at ~200ms p95 retrieval latency, serving 10+ customer chatbots across web app and Facebook</li>
+        <li>Exposed the retrieval and ingestion layer as MCP servers, letting agents consume document search as a standard tool interface</li>
         <li>Core contributor to web scraping microservice deployed on Kubernetes — scraped ~100K pages/week</li>
         <li>Fine-tuned LLMs (GPT, LLaMA 2, Gemini) for QA and summarization — improved answer relevance by ~30%</li>
     </ul>
@@ -245,10 +250,16 @@
     <span>Python, Scala, SQL, Golang, Rust (learning)</span>
 
     <span class="label">AI/ML</span>
-    <span>PyTorch, TensorFlow (Certified), Scikit-learn, HuggingFace, vLLM, OpenAI API</span>
+    <span>PyTorch, TensorFlow (Certified), Scikit-learn, HuggingFace, OpenAI API</span>
+
+    <span class="label">LLM Serving &amp; Optimization</span>
+    <span>vLLM, TGI, Ollama, quantization (GGUF, MLX), LoRA / QLoRA, batch &amp; real-time inference</span>
 
     <span class="label">LLMs & Agents</span>
-    <span>LangGraph, Haystack, CrewAI, LlamaIndex, RAG, Fine-tuning, Prompt Engineering</span>
+    <span>LangGraph, Haystack, CrewAI, LlamaIndex, MCP (servers &amp; clients), RAG, Fine-tuning, Prompt Engineering</span>
+
+    <span class="label">Vector DBs &amp; Retrieval</span>
+    <span>pgvector, Pinecone, Qdrant, Weaviate, Milvus, Chroma, FAISS, embeddings, hybrid search, reranking</span>
 
     <span class="label">LLM Observability</span>
     <span>Arize, LangSmith, OpenTelemetry, Guardrails</span>
@@ -266,7 +277,7 @@
     <span>AZ-900 Certified, Data Factory, Synapse Analytics, Databricks</span>
 
     <span class="label">Databases</span>
-    <span>PostgreSQL, MySQL, MongoDB, Snowflake, Pinecone, Redis</span>
+    <span>PostgreSQL, MySQL, MongoDB, Snowflake, Redis</span>
 
     <span class="label">Infrastructure</span>
     <span>Docker, Kubernetes, CI/CD (GitHub Actions, GitLab CI, BitBucket)</span>

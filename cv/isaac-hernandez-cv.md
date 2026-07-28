@@ -23,9 +23,9 @@ Mathematics degree with strong fundamentals in ML theory, distributed systems, a
 
 AI-powered grocery delivery platform personalized by dietary needs. [shop.vervemarket.com](https://shop.vervemarket.com) — Own all AI/Data strategy and execution, reporting directly to CTO.
 
-- Defined and delivered the product search experience end-to-end — hybrid semantic + keyword engine that became the core discovery mechanism, driving a 27% improvement in add-to-cart conversion; serves ~100K multi-retailer (multi-tenant) requests/day at ~1s p95
+- Defined and delivered the product search experience end-to-end — hybrid semantic + keyword engine combining vector similarity (embeddings + reranking) with lexical retrieval, which became the core discovery mechanism, driving a 27% improvement in add-to-cart conversion; serves ~100K multi-retailer (multi-tenant) requests/day at ~1s p95
 - Scoped, designed, and shipped product classification pipeline (LLM fine-tuning for NER), fully automating a previously manual cataloging process across 500K+ products — eliminating 100% of manual cataloging
-- Established the company's AI/Data infrastructure from scratch: pipelines, model serving, inference APIs — setting architectural standards for all future AI work
+- Established the company's AI/Data infrastructure from scratch: pipelines, model serving, inference APIs, vector store, and MCP servers exposing internal tools to agents — setting architectural standards for all future AI work
 - Scaled LLM inference serving for production (vLLM, TGI), handling real-time and batch inference across text and multimodal models including image generation pipelines
 - Built comprehensive evaluation infrastructure for LLM services — deterministic metrics (exact match, F1, BLEU, ROUGE), statistical significance testing, and LLM-as-judge pipelines — deployed across both batch evaluation and real-time serving, cutting the manual QA cycle from days to minutes
 - Set the AI/Data technical direction company-wide: owned the model/architecture roadmap, defined build-vs-buy and infra standards adopted by every AI project, and made the calls that other engineers built against
@@ -36,6 +36,8 @@ AI-powered grocery delivery platform personalized by dietary needs. [shop.vervem
 Mexico's leading accounting and enterprise software company. [contpaqi.com](https://www.contpaqi.com) — Led the AI product initiative from concept to production, defining technical direction and driving delivery.
 
 - Owned end-to-end architecture and delivery of multi-tool agents automating invoice generation, tax status certificates, and compliance workflows — cutting task turnaround from ~2 hours to under 10 minutes (~90% reduction)
+- Designed and deployed MCP servers exposing the existing enterprise APIs as agent tools, and built the agent host consuming them as MCP clients — decoupling tool integrations from agent logic
+- Ran self-hosted LLM inference (Ollama) for workloads requiring on-premise processing of sensitive financial data
 - Made build-vs-buy decisions for LLM integrations and designed the service layer connecting agents to existing enterprise APIs
 
 ### Lead R&D Engineer in Agentic AI (Contract) | SoftServe
@@ -44,7 +46,8 @@ Mexico's leading accounting and enterprise software company. [contpaqi.com](http
 [softserveinc.com](https://www.softserveinc.com/en-us) — Drove an agentic AI platform for healthcare from zero to production MVP.
 
 - Owned technical architecture and delivery: multi-agent orchestration integrating OCR, STT, and LLM services for clinical document processing — reaching ~92% field extraction accuracy and cutting manual data entry by ~70%
-- Defined integration patterns and standards for connecting agents to external healthcare APIs
+- Defined integration patterns and standards for connecting agents to external healthcare APIs — built MCP servers for the tool layer and the multi-agent host acting as MCP client
+- Deployed self-hosted LLM inference (Ollama) to keep protected health information within the client's infrastructure boundary
 - Delivered production MVP in under 4 months, establishing the reference architecture for future agent projects
 
 ### Senior AI Engineer | Telepatia AI
@@ -77,6 +80,7 @@ US-based tech startup, working with an international team on a contract basis �
 
 - Owned the data extraction platform: designed, built, and maintained the web scraping microservice (Python/K8s) powering the company's content ingestion — scraping ~100K pages/week
 - Architected and shipped document indexer API (HTML, PDF, Docx) with vector storage (PostgreSQL/pgvector) — the foundation of the RAG pipeline, indexing 1M+ documents at ~200ms p95 retrieval latency and serving 10+ customer chatbots across web app and Facebook
+- Exposed the retrieval and ingestion layer as MCP servers, letting agents consume document search as a standard tool interface
 - Drove LLM fine-tuning strategy (GPT, LLaMA 2, Gemini) for QA and summarization, improving answer relevance by ~30% across the product
 
 ### AI Engineer Consultant | Fundamentl Partners
@@ -141,9 +145,13 @@ Advanced research topics in multiple fields of mathematics at the Research Cente
 
 **Languages:** Python, Scala, SQL, Golang (familiar), Rust (familiar)
 
-**AI/ML:** PyTorch, TensorFlow (Certified Developer), Scikit-learn, HuggingFace, vLLM, OpenAI API
+**AI/ML:** PyTorch, TensorFlow (Certified Developer), Scikit-learn, HuggingFace, OpenAI API
 
-**LLMs & Agents:** LangGraph, LlamaIndex, CrewAI, Haystack, MCP Servers, RAG, Fine-tuning, Prompt Engineering
+**LLM Serving & Optimization:** vLLM, TGI, Ollama, quantization (GGUF, MLX), LoRA / QLoRA, batch & real-time inference
+
+**LLMs & Agents:** LangGraph, LlamaIndex, CrewAI, Haystack, MCP (servers & clients), RAG, Fine-tuning, Prompt Engineering
+
+**Vector DBs & Retrieval:** pgvector, Pinecone, Qdrant, Weaviate, Milvus, Chroma, FAISS, embeddings, hybrid search, reranking
 
 **Integrations & APIs:** FastAPI, Flask, REST APIs, GraphQL, Web Scraping, Data Extraction Pipelines
 
@@ -157,7 +165,7 @@ Advanced research topics in multiple fields of mathematics at the Research Cente
 
 **Cloud - Azure:** AZ-900 Certified, Azure Data Factory, Synapse Analytics, Databricks
 
-**Databases:** PostgreSQL, MySQL, MongoDB, Snowflake, Pinecone, Redis
+**Databases:** PostgreSQL, MySQL, MongoDB, Snowflake, Redis
 
 **Infrastructure:** Docker, Kubernetes, CI/CD (GitHub Actions, GitLab CI, BitBucket Pipelines)
 
