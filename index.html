@@ -719,6 +719,19 @@
                 </div>
                 <div class="col-md-6">
                     <div class="project-card">
+                        <h5>ANEForge — Apple Neural Engine</h5>
+                        <p class="project-desc">Ongoing contributor to the Python bindings for the Apple Neural Engine, with 9 PRs merged: ONNX operator coverage (fused attention, negative-axis handling), <code>linalg</code> primitives (matrix norms, <code>matrix_power</code>, <code>solve</code> via on-ANE pivoted LU, <code>expm</code> by scaling and squaring), einsum diagonal extraction, int8 quantization gated on activation-encoding range, and the roofline benchmark harness.</p>
+                        <span class="tech-badge">Apple Neural Engine</span>
+                        <span class="tech-badge">Quantization</span>
+                        <span class="tech-badge">ONNX</span>
+                        <span class="tech-badge">Numerics</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/sbryngelson/ANEForge" target="_blank"><i class="ti-github"></i> Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
                         <h5>vLLM — GGUF Plugin</h5>
                         <p class="project-desc">Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying the Triton and CUDA dequantization backends handle bf16 output correctly. Merged.</p>
                         <span class="tech-badge">vLLM</span>
@@ -727,6 +740,54 @@
                         <span class="tech-badge">CUDA</span>
                         <div class="project-links mt-3">
                             <a href="https://github.com/vllm-project/vllm-gguf-plugin/pull/73" target="_blank"><i class="ti-pencil-alt"></i> PR #73</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>OpenInference — LLM Observability</h5>
+                        <p class="project-desc">Recorded Anthropic prompt-cache read and write token details on streaming instrumentation paths, so cached-token spend is visible in traces. Merged.</p>
+                        <span class="tech-badge">Observability</span>
+                        <span class="tech-badge">OpenTelemetry</span>
+                        <span class="tech-badge">Tracing</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/Arize-ai/openinference" target="_blank"><i class="ti-github"></i> Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>LiteLLM — LLM Gateway</h5>
+                        <p class="project-desc">Bedrock provider raises a proper <code>BadRequestError</code> on malformed tool-call arguments instead of failing opaquely, and router pre-call checks count embedding input as text so token limits apply. In review.</p>
+                        <span class="tech-badge">LiteLLM</span>
+                        <span class="tech-badge">Routing</span>
+                        <span class="tech-badge">Bedrock</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/BerriAI/litellm/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> Contributions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>MLX — Apple Silicon Inference</h5>
+                        <p class="project-desc">Incremental weight materialization when saving large checkpoints, keeping peak memory bounded so multi-billion-parameter saves do not trip the Metal GPU watchdog timeout. In review.</p>
+                        <span class="tech-badge">MLX</span>
+                        <span class="tech-badge">Apple Silicon</span>
+                        <span class="tech-badge">Metal</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/ml-explore/mlx-lm/pull/1634" target="_blank"><i class="ti-github"></i> Contribution</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>smolagents — HuggingFace</h5>
+                        <p class="project-desc">Multi-engine search tool, memory summarization to keep long agent runs inside the context window, multi-turn <code>chat_history</code> on <code>agent.run()</code>, and preserving successful results when parallel tool calls partially fail. In review.</p>
+                        <span class="tech-badge">smolagents</span>
+                        <span class="tech-badge">Agents</span>
+                        <span class="tech-badge">Memory</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/huggingface/smolagents/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> Contributions</a>
                         </div>
                     </div>
                 </div>
@@ -747,20 +808,20 @@
                 </div>
                 <div class="col-md-6">
                     <div class="project-card">
-                        <h5>CrewAI — SearchApiSearchTool</h5>
-                        <p class="project-desc">Multi-engine search tool for CrewAI agents. Supports Google, YouTube, Bing, Baidu, and more. Enables dynamic engine switching within agent workflows.</p>
+                        <h5>CrewAI</h5>
+                        <p class="project-desc">Multi-engine search tool for CrewAI agents supporting Google, YouTube, Bing, Baidu and more, with dynamic engine switching inside agent workflows. Also hardened error handling across config parsing, callbacks, and async execution. In review.</p>
                         <span class="tech-badge">CrewAI</span>
                         <span class="tech-badge">Agents</span>
                         <span class="tech-badge">Search</span>
                         <div class="project-links mt-3">
-                            <a href="https://github.com/crewAIInc/crewAI/pull/6434" target="_blank"><i class="ti-pencil-alt"></i> PR #6434</a>
+                            <a href="https://github.com/crewAIInc/crewAI/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> Contributions</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>MCP Servers — Configurable Timeout</h5>
-                        <p class="project-desc">Made the request timeout configurable in the MCP fetch server, improving reliability for long-running tool calls. Shipped with test coverage for the new configuration paths.</p>
+                        <p class="project-desc">Made the request timeout configurable in the MCP fetch server, improving reliability for long-running tool calls, with test coverage for the new configuration paths. In review.</p>
                         <span class="tech-badge">MCP</span>
                         <span class="tech-badge">Python</span>
                         <span class="tech-badge">Agent Tooling</span>
@@ -771,12 +832,12 @@
                 </div>
                 <div class="col-md-6">
                     <div class="project-card">
-                        <h5>LangChain Docs — SearchApi Integration</h5>
-                        <p class="project-desc">Official integration documentation for SearchApi.io in the LangChain ecosystem. Covers tool usage, RAG retriever, and agent examples.</p>
-                        <span class="tech-badge">LangChain</span>
-                        <span class="tech-badge">Documentation</span>
+                        <h5>gpt-researcher</h5>
+                        <p class="project-desc">Session-based PDF downloads in the scraper so the configured User-Agent is respected, fixing fetches that servers rejected as unidentified clients. In review.</p>
+                        <span class="tech-badge">Research Agents</span>
+                        <span class="tech-badge">Scraping</span>
                         <div class="project-links mt-3">
-                            <a href="https://github.com/langchain-ai/docs/pull/4703" target="_blank"><i class="ti-pencil-alt"></i> PR #4703</a>
+                            <a href="https://github.com/assafelovic/gpt-researcher/pull/1849" target="_blank"><i class="ti-github"></i> Contribution</a>
                         </div>
                     </div>
                 </div>
