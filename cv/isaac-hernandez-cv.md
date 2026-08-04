@@ -153,7 +153,7 @@ Advanced research topics in multiple fields of mathematics at the Research Cente
 
 **Evaluation:** LLM-as-judge (pairwise, position-swapped, calibrated), statistical significance testing, perplexity / KL divergence / top-1 agreement, task-accuracy harnesses, offline & online eval pipelines
 
-**LLMs & Agents:** LangGraph, LlamaIndex, CrewAI, Haystack, MCP (servers & clients), RAG, Fine-tuning, Prompt Engineering
+**LLMs & Agents:** LangGraph, LlamaIndex, CrewAI, Haystack, n8n, MCP (servers & clients), RAG, Fine-tuning, Prompt Engineering
 
 **Vector DBs & Retrieval:** pgvector, Pinecone, Qdrant, Weaviate, Milvus, Chroma, FAISS, embeddings, hybrid search, reranking
 
