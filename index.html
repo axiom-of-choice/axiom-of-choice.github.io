@@ -532,6 +532,12 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
+                    <h6 class="mb-3">Dataset Building / Distillation / SFT (synthetic data, quality gating)</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 88%;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"><span>88%</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
                     <h6 class="mb-3">RAG / NLP / Fine-tuning (HuggingFace, LoRA / QLoRA, OpenAI)</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
@@ -700,13 +706,26 @@
     <section id="opensource" class="section">
         <div class="container">
             <h6 class="section-title mb-4 text-center">Open Source Contributions</h6>
-            <p class="mb-5 pb-4 text-center">Active contributor to major AI/ML frameworks and tools</p>
+            <p class="mb-5 pb-4 text-center">Active contributor to major AI/ML frameworks and tools. Datasets and quantized models on <a href="https://huggingface.co/axiom-of-choice" target="_blank">Hugging Face</a>.</p>
 
             <div class="row">
                 <div class="col-md-6">
                     <div class="project-card">
+                        <h5>Bespoke-Stratos-ES — Reasoning Dataset</h5>
+                        <p class="project-desc">Built a 16K-row Spanish reasoning dataset for SFT, distilled from DeepSeek V4 Flash. Traces are natively generated in Spanish rather than machine-translated, and every row is gated on language dominance, section integrity, and truncation.</p>
+                        <span class="tech-badge">Dataset Building</span>
+                        <span class="tech-badge">Distillation</span>
+                        <span class="tech-badge">SFT</span>
+                        <span class="tech-badge">Hugging Face</span>
+                        <div class="project-links mt-3">
+                            <a href="https://huggingface.co/datasets/axiom-of-choice/bespoke-stratos-es" target="_blank"><i class="ti-package"></i> Dataset</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
                         <h5>mlx-community — Quantized Model Releases</h5>
-                        <p class="project-desc">Published 4/6/8-bit MLX conversions of a 4.5B agentic VLM for Apple Silicon, each evaluated against the unquantized bf16 source across four layers: distributional fidelity (perplexity ratio, top-1 agreement, KL divergence), generation agreement, task accuracy, and blind pairwise LLM-judge quality with position swapping and SEM reported. All variants proved statistically indistinguishable on judged quality while BLEU-vs-source spanned 49.5–82.7 — showing why output-similarity metrics misrank quantized models. 4-bit runs 3.3x faster at 2.5x less memory.</p>
+                        <p class="project-desc">Published 4/6/8-bit MLX quantizations of a 4.5B agentic VLM for Apple Silicon, each evaluated against the bf16 source on distributional fidelity (perplexity ratio, top-1 agreement, KL divergence), task accuracy, and blind pairwise LLM-judge quality with position swapping. All variants proved statistically indistinguishable on judged quality while BLEU-vs-source spanned 49.5–82.7, showing why output-similarity metrics misrank quantized models. 4-bit runs 3.3x faster at 2.5x less memory.</p>
                         <span class="tech-badge">Quantization</span>
                         <span class="tech-badge">MLX</span>
                         <span class="tech-badge">Eval Methodology</span>
