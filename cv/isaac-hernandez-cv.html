@@ -210,9 +210,12 @@
 
 <h2>Open Source Contributions</h2>
 
+<p>Datasets, distillation, and quantization published on <a href="https://huggingface.co/axiom-of-choice">Hugging Face</a>.</p>
+
 <div class="job">
     <ul>
-        <li><strong>mlx-community (Apple Silicon quantization)</strong> — Published 4/6/8-bit MLX conversions of a 4.5B agentic VLM, each evaluated against the unquantized bf16 source across four layers: distributional fidelity (perplexity ratio, top-1 agreement, KL divergence), generation agreement, task accuracy, and blind pairwise LLM-judge quality with position swapping and SEM reported. Showed all variants are statistically indistinguishable on judged quality while BLEU-vs-source spans 49.5–82.7 — demonstrating why output-similarity metrics misrank quantized models. 4-bit runs 3.3x faster at 2.5x less memory (<a href="https://huggingface.co/mlx-community/AREX-Turbo-4bit">models</a> · <a href="https://github.com/axiom-of-choice/mlx-contributing">method &amp; results</a>)</li>
+        <li><strong>Bespoke-Stratos-ES</strong> — Built a 16K-row Spanish reasoning dataset for SFT, distilled from DeepSeek V4 Flash. Traces are natively generated in Spanish, not machine-translated, and gated on language dominance, section integrity, and truncation (<a href="https://huggingface.co/datasets/axiom-of-choice/bespoke-stratos-es">dataset</a>)</li>
+        <li><strong>mlx-community (quantization)</strong> — Published 4/6/8-bit MLX quantizations of a 4.5B agentic VLM for Apple Silicon. Evaluated each against the bf16 source on distributional fidelity (perplexity, KL, top-1 agreement), task accuracy, and blind pairwise LLM-judge quality: all statistically indistinguishable on judged quality while BLEU-vs-source spanned 49.5–82.7, showing why output-similarity metrics misrank quantized models. 4-bit runs 3.3x faster at 2.5x less memory (<a href="https://huggingface.co/mlx-community/AREX-Turbo-4bit">models</a> · <a href="https://github.com/axiom-of-choice/mlx-contributing">method</a>)</li>
         <li><strong>vLLM (GGUF plugin)</strong> — Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying the Triton and CUDA dequantization backends handle bf16 output correctly (<a href="https://github.com/vllm-project/vllm-gguf-plugin/pull/73">PR #73</a>)</li>
         <li><strong>langchain-searchapi</strong> — Authored and published a standalone LangChain integration package (<a href="https://pypi.org/project/langchain-searchapi/">PyPI</a>) for SearchApi.io: multi-engine search tool with dynamic engine selection, RAG retriever, and full async support</li>
         <li><strong>CrewAI</strong> — Contributed <code>SearchApiSearchTool</code>, a multi-engine search tool (Google, YouTube, Bing, Baidu, and more) with dynamic engine switching for agent workflows (<a href="https://github.com/crewAIInc/crewAI/pull/6434">PR #6434</a>)</li>
@@ -257,11 +260,14 @@
     <span class="label">LLM Serving &amp; Optimization</span>
     <span>vLLM, TGI, Ollama, MLX, quantization (GGUF, MLX — published to mlx-community), LoRA / QLoRA, batch &amp; real-time inference</span>
 
+    <span class="label">Training Data &amp; Distillation</span>
+    <span>synthetic dataset generation, teacher-model distillation, SFT dataset curation, automated quality gating, published to the Hugging Face Hub</span>
+
     <span class="label">Evaluation</span>
     <span>LLM-as-judge (pairwise, position-swapped, calibrated), statistical significance testing, perplexity / KL divergence / top-1 agreement, task-accuracy harnesses, offline &amp; online eval pipelines</span>
 
     <span class="label">LLMs & Agents</span>
-    <span>LangGraph, Haystack, CrewAI, LlamaIndex, MCP (servers &amp; clients), RAG, Fine-tuning, Prompt Engineering</span>
+    <span>LangGraph, Haystack, CrewAI, LlamaIndex, n8n, MCP (servers &amp; clients), RAG, Fine-tuning, Prompt Engineering</span>
 
     <span class="label">Vector DBs &amp; Retrieval</span>
     <span>pgvector, Pinecone, Qdrant, Weaviate, Milvus, Chroma, FAISS, embeddings, hybrid search, reranking</span>
