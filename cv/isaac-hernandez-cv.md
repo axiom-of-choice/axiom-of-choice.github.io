@@ -115,13 +115,14 @@ Tech/Logistics startup based in Mexico. Ranked in Top 10 LinkedIn Startups.
 
 Datasets, distillation, and quantization published on [Hugging Face](https://huggingface.co/axiom-of-choice).
 
+- **ANEForge (Apple Neural Engine)** — Ongoing contributor to the Python bindings for the Apple Neural Engine, with 17 PRs merged: ONNX operator coverage (fused attention, negative-axis handling), `linalg` primitives (matrix norms, `matrix_power`, `solve` via on-ANE pivoted LU, `expm` by scaling and squaring, `inv`, QR-based least squares), einsum diagonal extraction, int8 quantization gated on activation-encoding range, `erf` as its own polynomial, and the roofline benchmark harness. [Project](https://github.com/sbryngelson/ANEForge)
 - **Bespoke-Stratos-ES** — Built a 16K-row Spanish reasoning dataset for SFT, distilled from DeepSeek V4 Flash. Traces are natively generated in Spanish, not machine-translated, and gated on language dominance, section integrity, and truncation. [Dataset](https://huggingface.co/datasets/axiom-of-choice/bespoke-stratos-es)
 - **mlx-community (quantization)** — Published 4/6/8-bit MLX quantizations of a 4.5B agentic VLM for Apple Silicon. Evaluated each against the bf16 source on distributional fidelity (perplexity, KL, top-1 agreement), task accuracy, and blind pairwise LLM-judge quality: all statistically indistinguishable on judged quality while BLEU-vs-source spanned 49.5–82.7, showing why output-similarity metrics misrank quantized models. 4-bit runs 3.3x faster at 2.5x less memory. [Models](https://huggingface.co/mlx-community/AREX-Turbo-4bit) · [Method](https://github.com/axiom-of-choice/mlx-contributing)
-- **vLLM (GGUF plugin)** — Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying both the Triton and CUDA dequantization backends handle bf16 output correctly. [PR #73](https://github.com/vllm-project/vllm-gguf-plugin/pull/73)
-- **langchain-searchapi** — Authored and published a standalone LangChain integration package (PyPI) for SearchApi.io: multi-engine search tool with dynamic engine selection, a RAG retriever, and full async support. [PyPI](https://pypi.org/project/langchain-searchapi/) · [Code](https://github.com/axiom-of-choice/langchain-searchapi)
-- **CrewAI** — Contributed `SearchApiSearchTool`, a multi-engine search tool (Google, YouTube, Bing, Baidu, and more) enabling dynamic engine switching within agent workflows. [PR #6434](https://github.com/crewAIInc/crewAI/pull/6434)
-- **Model Context Protocol (MCP) Servers** — Added configurable timeout support, improving reliability for long-running tool calls. [PR #4459](https://github.com/modelcontextprotocol/servers/pull/4459)
-- **LangChain Docs** — Authored the official SearchApi.io integration documentation covering tool usage, the RAG retriever, and agent examples. [PR #4703](https://github.com/langchain-ai/docs/pull/4703)
+- **vLLM (GGUF plugin)** — Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying both the Triton and CUDA dequantization backends handle bf16 output correctly. Merged. [PR #73](https://github.com/vllm-project/vllm-gguf-plugin/pull/73)
+- **OpenInference (LLM observability)** — Two PRs merged in the Anthropic instrumentor: prompt-cache read and write token details recorded on the streaming paths, so cached-token spend is visible in traces, and `llm.token_count.total` derived on the non-streaming path so both paths report the same totals. [Project](https://github.com/Arize-ai/openinference)
+- **MLX (mlx-lm)** — Merged: the LoRA trainer's batch shuffling now honors `seed=0`, which was silently ignored despite being the CLI default. [PR #1661](https://github.com/ml-explore/mlx-lm/pull/1661)
+- **SearchApi.io integrations** — Authored and published two standalone packages on PyPI bringing multi-engine web search (Google, News, Shopping, YouTube, Bing, Baidu) to agent frameworks: a LangChain integration with search tool, RAG retriever, and full async support, and a LlamaIndex tool integration. Official LangChain integration docs merged upstream. [LangChain](https://github.com/axiom-of-choice/langchain-searchapi) · [LlamaIndex](https://github.com/axiom-of-choice/llama-index-tools-searchapi) · [Docs PR #4703](https://github.com/langchain-ai/docs/pull/4703)
+- **In review** — Open contributions across `coremltools` (decomposing Softplus to avoid fp16 overflow on ANE), `mlx` core (GPU `hadamard_transform` for non-power-of-2 factors, e4m3 float8 NaN decoding), `mlx-lm` (gradient clipping, early stopping, incremental weight materialization on save), `langchain-google` (Gemini `service_tier`), smolagents, CrewAI, LiteLLM, MCP servers, and gpt-researcher.
 
 ---
 
@@ -152,7 +153,7 @@ Advanced research topics in multiple fields of mathematics at the Research Cente
 
 **AI/ML:** PyTorch, TensorFlow (Certified Developer), Scikit-learn, HuggingFace, OpenAI API
 
-**LLM Serving & Optimization:** vLLM, TGI, Ollama, MLX, quantization (GGUF, MLX — published to mlx-community), LoRA / QLoRA, batch & real-time inference
+**LLM Serving & Optimization:** vLLM, TGI, Ollama, MLX, Apple Neural Engine (coremltools, ANEForge), quantization (GGUF, MLX — published to mlx-community), LoRA / QLoRA, batch & real-time inference
 
 **Training Data & Distillation:** synthetic dataset generation, teacher-model distillation, SFT dataset curation, automated quality gating, published to the Hugging Face Hub
 
