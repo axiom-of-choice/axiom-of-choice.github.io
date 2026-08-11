@@ -739,13 +739,25 @@
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>ANEForge — Apple Neural Engine</h5>
-                        <p class="project-desc">Ongoing contributor to the Python bindings for the Apple Neural Engine, with 9 PRs merged: ONNX operator coverage (fused attention, negative-axis handling), <code>linalg</code> primitives (matrix norms, <code>matrix_power</code>, <code>solve</code> via on-ANE pivoted LU, <code>expm</code> by scaling and squaring), einsum diagonal extraction, int8 quantization gated on activation-encoding range, and the roofline benchmark harness.</p>
+                        <p class="project-desc">Ongoing contributor to the Python bindings for the Apple Neural Engine, with 17 PRs merged: ONNX operator coverage (fused attention, negative-axis handling), <code>linalg</code> primitives (matrix norms, <code>matrix_power</code>, <code>solve</code> via on-ANE pivoted LU, <code>expm</code> by scaling and squaring, <code>inv</code>, QR-based least squares), einsum diagonal extraction, int8 quantization gating, <code>erf</code> as its own polynomial instead of via <code>erfc</code>, and the roofline benchmark harness.</p>
                         <span class="tech-badge">Apple Neural Engine</span>
                         <span class="tech-badge">Quantization</span>
                         <span class="tech-badge">ONNX</span>
                         <span class="tech-badge">Numerics</span>
                         <div class="project-links mt-3">
                             <a href="https://github.com/sbryngelson/ANEForge" target="_blank"><i class="ti-github"></i> Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>coremltools — Apple ML Tooling</h5>
+                        <p class="project-desc">Decomposed <code>Softplus</code> in the TensorFlow frontend to avoid fp16 overflow on the Apple Neural Engine, where the native op's numeric range differs from the CPU and GPU backends. In review.</p>
+                        <span class="tech-badge">Apple Neural Engine</span>
+                        <span class="tech-badge">coremltools</span>
+                        <span class="tech-badge">Numerics</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/apple/coremltools/pull/2814" target="_blank"><i class="ti-pencil-alt"></i> PR #2814</a>
                         </div>
                     </div>
                 </div>
@@ -765,7 +777,7 @@
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>OpenInference — LLM Observability</h5>
-                        <p class="project-desc">Recorded Anthropic prompt-cache read and write token details on streaming instrumentation paths, so cached-token spend is visible in traces. Merged.</p>
+                        <p class="project-desc">Two PRs merged in the Anthropic instrumentor. Prompt-cache read and write token details are now recorded on the streaming paths, so cached-token spend is visible in traces; and <code>llm.token_count.total</code>, previously emitted only when streaming, is derived on the non-streaming path so both paths report the same totals.</p>
                         <span class="tech-badge">Observability</span>
                         <span class="tech-badge">OpenTelemetry</span>
                         <span class="tech-badge">Tracing</span>
@@ -789,12 +801,13 @@
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>MLX — Apple Silicon Inference</h5>
-                        <p class="project-desc">Incremental weight materialization when saving large checkpoints, keeping peak memory bounded so multi-billion-parameter saves do not trip the Metal GPU watchdog timeout. In review.</p>
+                        <p class="project-desc">Merged: the LoRA trainer's batch shuffling now honors <code>seed=0</code>, which was silently ignored despite being the CLI default, so the most common value was the one that did not reproduce. In review: incremental weight materialization when saving large checkpoints to avoid the Metal GPU watchdog timeout, optional gradient clipping and a non-finite guard for the LoRA trainer, and best-validation-loss adapter saving with early stopping — plus, in MLX core, a GPU <code>hadamard_transform</code> fix for non-power-of-2 factors and NaN decoding for e4m3 float8.</p>
                         <span class="tech-badge">MLX</span>
                         <span class="tech-badge">Apple Silicon</span>
                         <span class="tech-badge">Metal</span>
                         <div class="project-links mt-3">
-                            <a href="https://github.com/ml-explore/mlx-lm/pull/1634" target="_blank"><i class="ti-github"></i> Contribution</a>
+                            <a href="https://github.com/ml-explore/mlx-lm/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> mlx-lm</a>
+                            <a href="https://github.com/ml-explore/mlx/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> mlx</a>
                         </div>
                     </div>
                 </div>
@@ -812,16 +825,30 @@
                 </div>
                 <div class="col-md-6">
                     <div class="project-card">
-                        <h5>langchain-searchapi</h5>
-                        <p class="project-desc">Standalone LangChain integration package for SearchApi.io. Multi-engine search tool with dynamic engine selection, RAG retriever, and full async support. Published on PyPI.</p>
+                        <h5>SearchApi.io Integrations</h5>
+                        <p class="project-desc">Two standalone packages bringing SearchApi.io's multi-engine web search (Google, News, Shopping, YouTube, Bing, Baidu) to agent frameworks: a LangChain integration with a search tool, RAG retriever, and full async support, and a LlamaIndex tool integration. Both published on PyPI, plus the official integration docs upstream in LangChain.</p>
                         <span class="tech-badge">LangChain</span>
+                        <span class="tech-badge">LlamaIndex</span>
                         <span class="tech-badge">PyPI</span>
                         <span class="tech-badge">Search</span>
-                        <span class="tech-badge">RAG</span>
                         <div class="project-links mt-3">
-                            <a href="https://github.com/axiom-of-choice/langchain-searchapi" target="_blank"><i class="ti-github"></i> Code</a>
+                            <a href="https://github.com/axiom-of-choice/langchain-searchapi" target="_blank"><i class="ti-github"></i> LangChain</a>
                             <a href="https://pypi.org/project/langchain-searchapi/" target="_blank"><i class="ti-link"></i> PyPI</a>
+                            <a href="https://github.com/axiom-of-choice/llama-index-tools-searchapi" target="_blank"><i class="ti-github"></i> LlamaIndex</a>
+                            <a href="https://pypi.org/project/llama-index-tools-searchapi/" target="_blank"><i class="ti-link"></i> PyPI</a>
                             <a href="https://github.com/langchain-ai/docs/pull/4703" target="_blank"><i class="ti-pencil-alt"></i> Docs PR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>langchain-google — Gemini service_tier</h5>
+                        <p class="project-desc">Added <code>service_tier</code> support to <code>ChatGoogleGenerativeAI</code>, plus the accompanying docs page. In review.</p>
+                        <span class="tech-badge">LangChain</span>
+                        <span class="tech-badge">Google Gemini</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/langchain-ai/langchain-google/pull/1937" target="_blank"><i class="ti-pencil-alt"></i> PR #1937</a>
+                            <a href="https://github.com/langchain-ai/docs/pull/5452" target="_blank"><i class="ti-pencil-alt"></i> Docs PR</a>
                         </div>
                     </div>
                 </div>
