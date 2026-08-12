@@ -144,6 +144,15 @@
             font-size: 0.95rem;
         }
 
+        .experience-item .company a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .experience-item .company a:hover {
+            text-decoration: underline;
+        }
+
         .experience-item .date {
             color: var(--text-secondary);
             font-size: 0.85rem;
@@ -375,7 +384,7 @@
                 <div class="col-md-6">
                     <div class="experience-item">
                         <h5>Staff AI Engineer</h5>
-                        <span class="company">VerveMarket</span>
+                        <span class="company"><a href="https://shop.vervemarket.com" target="_blank">VerveMarket</a></span>
                         <div class="date">June 2025 - Present</div>
                         <p>Own all AI/Data strategy and execution, reporting directly to CTO — setting the company-wide model/architecture roadmap and infra standards. Defined and delivered the product search experience end-to-end — hybrid engine combining vector similarity (embeddings + reranking) with keyword retrieval, driving a 27% add-to-cart conversion improvement, serving ~100K multi-tenant requests/day at ~1s p95. Shipped a customer-facing autonomous agent embedded in the product — plans and executes multi-step tasks through multi-turn tool use for meal planning, cart building, and dietary profile tuning, acting on the live catalog and shopper's cart. Automated product cataloging across 500K+ products via LLM fine-tuning for NER. Established the AI infrastructure from scratch, including the vector store and MCP servers exposing internal tools to agents. Scaled LLM inference serving for production across text and multimodal models including image generation. Built evaluation infrastructure with deterministic, statistical, and LLM-as-judge pipelines — cutting the manual QA cycle from days to minutes.</p>
                         <span class="tech-badge">LLMs</span>
@@ -397,7 +406,7 @@
                     <div class="experience-item">
                         <div class="highlight-banner">Mexico's Leading Accounting Software</div>
                         <h5>Lead AI Engineer (Contract)</h5>
-                        <span class="company">Contpaqi</span>
+                        <span class="company"><a href="https://www.contpaqi.com" target="_blank">Contpaqi</a></span>
                         <div class="date">September 2025 - February 2026</div>
                         <p>Led the AI product initiative from concept to production. Owned end-to-end architecture and delivery of multi-tool agents automating invoice generation, tax certificates, and compliance — cutting task turnaround from ~2 hours to under 10 minutes (~90% reduction). Designed and deployed MCP servers exposing enterprise APIs as agent tools, plus the agent host consuming them as MCP clients. Ran self-hosted inference (Ollama) for on-premise processing of sensitive financial data.</p>
                         <span class="tech-badge">Agents</span>
@@ -409,7 +418,7 @@
 
                     <div class="experience-item">
                         <h5>Lead R&D Engineer in Agentic AI (Contract)</h5>
-                        <span class="company">SoftServe</span>
+                        <span class="company"><a href="https://www.softserveinc.com/en-us" target="_blank">SoftServe</a></span>
                         <div class="date">July 2025 - November 2025</div>
                         <p>Drove an agentic AI platform for healthcare from zero to production MVP. Owned technical architecture: multi-agent orchestration integrating OCR, STT, and LLM services — reaching ~92% field extraction accuracy and cutting manual data entry by ~70%. Built MCP servers for the healthcare API tool layer and the multi-agent host acting as MCP client, with self-hosted inference (Ollama) keeping protected health information inside the client's infrastructure. Delivered in under 4 months.</p>
                         <span class="tech-badge">Healthcare AI</span>
@@ -422,7 +431,7 @@
 
                     <div class="experience-item">
                         <h5>Senior AI Engineer</h5>
-                        <span class="company">Telepatia AI</span>
+                        <span class="company"><a href="https://www.telepatia.ai/es" target="_blank">Telepatia AI</a></span>
                         <div class="date">June 2025 - July 2025</div>
                         <p>Owned end-to-end delivery of a hallucination and missing information detector for AI-assisted medical form filling — flagging ~95% of hallucinated or missing fields. Scoped the problem, defined the approach, and shipped in under 5 weeks.</p>
                         <span class="tech-badge">NLP</span>
@@ -434,7 +443,7 @@
                     <div class="experience-item">
                         <div class="highlight-banner">Top LATAM Fintech</div>
                         <h5>Senior Machine Learning Engineer</h5>
-                        <span class="company">Nubank</span>
+                        <span class="company"><a href="https://nubank.com.br/en/" target="_blank">Nubank</a></span>
                         <div class="date">January 2024 - May 2025</div>
                         <p>Owned the full model lifecycle for underwriting risk models serving 3M+ monthly credit decisions at ~150ms p99 under a 99.9% uptime SLA on K8s. Designed and shipped a Scala-based data integrity framework adopted across 8+ teams. Operated autonomously across multiple squads.</p>
                         <span class="tech-badge">Scala</span>
@@ -446,7 +455,7 @@
                     <div class="experience-item">
                         <div class="highlight-banner">Top 3 US Bank | Global Presence in 160+ Countries</div>
                         <h5>Senior Data Engineer</h5>
-                        <span class="company">Citigroup</span>
+                        <span class="company"><a href="https://www.citigroup.com" target="_blank">Citigroup</a></span>
                         <div class="date">July 2023 - January 2024</div>
                         <p>Technical lead for a 4+ PB Data Lake migration (Hadoop/Hive → S3/Snowflake), cutting query costs by ~35%. Defined migration strategy and drove execution across teams. Owned Spark job design on EKS processing 30+ TB daily.</p>
                         <span class="tech-badge">Spark</span>
@@ -457,7 +466,7 @@
 
                     <div class="experience-item">
                         <h5>AI Engineer (Contract)</h5>
-                        <span class="company">Botco AI</span>
+                        <span class="company"><a href="https://botco.ai" target="_blank">Botco AI</a></span>
                         <div class="date">April 2023 - September 2025</div>
                         <p>Reported directly to the CTO and VP of Engineering. Owned the data extraction platform powering content ingestion — scraping ~100K pages/week. Architected and shipped a document indexer API with vector storage (PostgreSQL/pgvector) — the foundation of the RAG pipeline, indexing 1M+ documents at ~200ms p95 retrieval latency and serving 10+ customer chatbots across web app and Facebook. Exposed retrieval and ingestion as MCP servers so agents could consume document search as a standard tool interface. Drove LLM fine-tuning strategy (GPT, LLaMA, Gemini), improving answer relevance by ~30%.</p>
                         <span class="tech-badge">RAG</span>

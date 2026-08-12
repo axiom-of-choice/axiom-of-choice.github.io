@@ -113,6 +113,7 @@ Tech/Logistics startup based in Mexico. Ranked in Top 10 LinkedIn Startups.
 
 ## Open Source Contributions
 
+- **Hugging Face releases.** MLX quantizations published to mlx-community, such as [GLM-4.1V-9B-Thinking-8bit](https://huggingface.co/mlx-community/GLM-4.1V-9B-Thinking-8bit), and Spanish reasoning adapters for [Gemma](https://huggingface.co/axiom-of-choice/gemma-3-4b-es-reasoning-qlora) and [Qwen3](https://huggingface.co/axiom-of-choice/qwen3-4b-es-reasoning-qlora) trained on distillation datasets I build, such as [Bespoke-Stratos-ES](https://huggingface.co/datasets/axiom-of-choice/bespoke-stratos-es).
 - **[ANEForge](https://github.com/sbryngelson/ANEForge).** Python bindings that compile numerical code to the Apple Neural Engine. Ongoing contributor across ONNX operator coverage, `linalg` primitives, and the benchmark harness.
 - **[MLX](https://github.com/ml-explore/mlx) and [mlx-lm](https://github.com/ml-explore/mlx-lm).** Apple's array framework and its LLM training and serving toolkit. Contributor to the Metal GPU kernels and the LoRA trainer.
 - **[vLLM GGUF plugin](https://github.com/vllm-project/vllm-gguf-plugin).** GGUF quantization support for vLLM. Contributor to the dequantization backends and tensor-parallel weight loading.
@@ -124,7 +125,6 @@ Tech/Logistics startup based in Mexico. Ranked in Top 10 LinkedIn Startups.
 - **[langchain-google](https://github.com/langchain-ai/langchain-google).** LangChain's Gemini and Vertex AI integrations. Open contributions to tool calling and service tiers. Also authored the official SearchApi.io [integration docs](https://github.com/langchain-ai/docs/pull/4703).
 - **[smolagents](https://github.com/huggingface/smolagents), [CrewAI](https://github.com/crewAIInc/crewAI), [MCP servers](https://github.com/modelcontextprotocol/servers), [gpt-researcher](https://github.com/assafelovic/gpt-researcher).** Agent frameworks. Open contributions covering search tooling, memory management, and error handling.
 - **[langchain-searchapi](https://github.com/axiom-of-choice/langchain-searchapi) and [llama-index-tools-searchapi](https://github.com/axiom-of-choice/llama-index-tools-searchapi).** Two standalone PyPI packages of my own, bringing multi-engine web search to LangChain and LlamaIndex.
-- **Hugging Face releases.** MLX quantizations published to mlx-community, such as [GLM-4.1V-9B-Thinking-8bit](https://huggingface.co/mlx-community/GLM-4.1V-9B-Thinking-8bit), and Spanish reasoning adapters for Gemma and Qwen3 trained on distillation datasets I build, such as [Bespoke-Stratos-ES](https://huggingface.co/datasets/axiom-of-choice/bespoke-stratos-es).
 ---
 
 ## Education
