@@ -144,6 +144,15 @@
             font-size: 0.95rem;
         }
 
+        .experience-item .company a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .experience-item .company a:hover {
+            text-decoration: underline;
+        }
+
         .experience-item .date {
             color: var(--text-secondary);
             font-size: 0.85rem;
@@ -375,7 +384,7 @@
                 <div class="col-md-6">
                     <div class="experience-item">
                         <h5>Staff AI Engineer</h5>
-                        <span class="company">VerveMarket</span>
+                        <span class="company"><a href="https://shop.vervemarket.com" target="_blank">VerveMarket</a></span>
                         <div class="date">June 2025 - Present</div>
                         <p>Own all AI/Data strategy and execution, reporting directly to CTO — setting the company-wide model/architecture roadmap and infra standards. Defined and delivered the product search experience end-to-end — hybrid engine combining vector similarity (embeddings + reranking) with keyword retrieval, driving a 27% add-to-cart conversion improvement, serving ~100K multi-tenant requests/day at ~1s p95. Shipped a customer-facing autonomous agent embedded in the product — plans and executes multi-step tasks through multi-turn tool use for meal planning, cart building, and dietary profile tuning, acting on the live catalog and shopper's cart. Automated product cataloging across 500K+ products via LLM fine-tuning for NER. Established the AI infrastructure from scratch, including the vector store and MCP servers exposing internal tools to agents. Scaled LLM inference serving for production across text and multimodal models including image generation. Built evaluation infrastructure with deterministic, statistical, and LLM-as-judge pipelines — cutting the manual QA cycle from days to minutes.</p>
                         <span class="tech-badge">LLMs</span>
@@ -397,7 +406,7 @@
                     <div class="experience-item">
                         <div class="highlight-banner">Mexico's Leading Accounting Software</div>
                         <h5>Lead AI Engineer (Contract)</h5>
-                        <span class="company">Contpaqi</span>
+                        <span class="company"><a href="https://www.contpaqi.com" target="_blank">Contpaqi</a></span>
                         <div class="date">September 2025 - February 2026</div>
                         <p>Led the AI product initiative from concept to production. Owned end-to-end architecture and delivery of multi-tool agents automating invoice generation, tax certificates, and compliance — cutting task turnaround from ~2 hours to under 10 minutes (~90% reduction). Designed and deployed MCP servers exposing enterprise APIs as agent tools, plus the agent host consuming them as MCP clients. Ran self-hosted inference (Ollama) for on-premise processing of sensitive financial data.</p>
                         <span class="tech-badge">Agents</span>
@@ -409,7 +418,7 @@
 
                     <div class="experience-item">
                         <h5>Lead R&D Engineer in Agentic AI (Contract)</h5>
-                        <span class="company">SoftServe</span>
+                        <span class="company"><a href="https://www.softserveinc.com/en-us" target="_blank">SoftServe</a></span>
                         <div class="date">July 2025 - November 2025</div>
                         <p>Drove an agentic AI platform for healthcare from zero to production MVP. Owned technical architecture: multi-agent orchestration integrating OCR, STT, and LLM services — reaching ~92% field extraction accuracy and cutting manual data entry by ~70%. Built MCP servers for the healthcare API tool layer and the multi-agent host acting as MCP client, with self-hosted inference (Ollama) keeping protected health information inside the client's infrastructure. Delivered in under 4 months.</p>
                         <span class="tech-badge">Healthcare AI</span>
@@ -422,7 +431,7 @@
 
                     <div class="experience-item">
                         <h5>Senior AI Engineer</h5>
-                        <span class="company">Telepatia AI</span>
+                        <span class="company"><a href="https://www.telepatia.ai/es" target="_blank">Telepatia AI</a></span>
                         <div class="date">June 2025 - July 2025</div>
                         <p>Owned end-to-end delivery of a hallucination and missing information detector for AI-assisted medical form filling — flagging ~95% of hallucinated or missing fields. Scoped the problem, defined the approach, and shipped in under 5 weeks.</p>
                         <span class="tech-badge">NLP</span>
@@ -434,7 +443,7 @@
                     <div class="experience-item">
                         <div class="highlight-banner">Top LATAM Fintech</div>
                         <h5>Senior Machine Learning Engineer</h5>
-                        <span class="company">Nubank</span>
+                        <span class="company"><a href="https://nubank.com.br/en/" target="_blank">Nubank</a></span>
                         <div class="date">January 2024 - May 2025</div>
                         <p>Owned the full model lifecycle for underwriting risk models serving 3M+ monthly credit decisions at ~150ms p99 under a 99.9% uptime SLA on K8s. Designed and shipped a Scala-based data integrity framework adopted across 8+ teams. Operated autonomously across multiple squads.</p>
                         <span class="tech-badge">Scala</span>
@@ -446,7 +455,7 @@
                     <div class="experience-item">
                         <div class="highlight-banner">Top 3 US Bank | Global Presence in 160+ Countries</div>
                         <h5>Senior Data Engineer</h5>
-                        <span class="company">Citigroup</span>
+                        <span class="company"><a href="https://www.citigroup.com" target="_blank">Citigroup</a></span>
                         <div class="date">July 2023 - January 2024</div>
                         <p>Technical lead for a 4+ PB Data Lake migration (Hadoop/Hive → S3/Snowflake), cutting query costs by ~35%. Defined migration strategy and drove execution across teams. Owned Spark job design on EKS processing 30+ TB daily.</p>
                         <span class="tech-badge">Spark</span>
@@ -457,7 +466,7 @@
 
                     <div class="experience-item">
                         <h5>AI Engineer (Contract)</h5>
-                        <span class="company">Botco AI</span>
+                        <span class="company"><a href="https://botco.ai" target="_blank">Botco AI</a></span>
                         <div class="date">April 2023 - September 2025</div>
                         <p>Reported directly to the CTO and VP of Engineering. Owned the data extraction platform powering content ingestion — scraping ~100K pages/week. Architected and shipped a document indexer API with vector storage (PostgreSQL/pgvector) — the foundation of the RAG pipeline, indexing 1M+ documents at ~200ms p95 retrieval latency and serving 10+ customer chatbots across web app and Facebook. Exposed retrieval and ingestion as MCP servers so agents could consume document search as a standard tool interface. Drove LLM fine-tuning strategy (GPT, LLaMA, Gemini), improving answer relevance by ~30%.</p>
                         <span class="tech-badge">RAG</span>
@@ -471,7 +480,7 @@
                     <div class="experience-item">
                         <div class="highlight-banner">Largest Bank in Mexico by Customers</div>
                         <h5>Senior Machine Learning Engineer</h5>
-                        <span class="company">BBVA AI Factory</span>
+                        <span class="company"><a href="https://www.bbvaaifactory.com" target="_blank">BBVA AI Factory</a></span>
                         <div class="date">January 2023 - July 2023</div>
                         <p>Technical lead for anti-money-laundering detection system: architected and deployed graph-based models processing 10M+ transactions, improving detection recall by ~25%. Set engineering standards for the team's PySpark codebase.</p>
                         <span class="tech-badge">Graph ML</span>
@@ -706,7 +715,7 @@
     <section id="opensource" class="section">
         <div class="container">
             <h6 class="section-title mb-4 text-center">Open Source Contributions</h6>
-            <p class="mb-5 pb-4 text-center">Active contributor to major AI/ML frameworks and tools. Datasets and quantized models on <a href="https://huggingface.co/axiom-of-choice" target="_blank">Hugging Face</a>.</p>
+            <p class="mb-5 pb-4 text-center">Active contributor to major AI/ML frameworks and tools. Datasets, fine-tuned adapters and quantized models on <a href="https://huggingface.co/axiom-of-choice" target="_blank">Hugging Face</a>.</p>
 
             <div class="row">
                 <div class="col-md-6">
@@ -719,6 +728,20 @@
                         <span class="tech-badge">Hugging Face</span>
                         <div class="project-links mt-3">
                             <a href="https://huggingface.co/datasets/axiom-of-choice/bespoke-stratos-es" target="_blank"><i class="ti-package"></i> Dataset</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>Spanish Reasoning Adapters — LoRA / QLoRA</h5>
+                        <p class="project-desc">Trained three open models to do their chain-of-thought in Spanish on the dataset above, and published each for MLX, PEFT and GGUF. Measured on a held-out Spanish GSM8K split with paired McNemar tests rather than a single score: Qwen3-4B gains <strong>7.4 accuracy points while switching to perfect Spanish</strong> (p = 0.0031), so the capability costs nothing; Gemma-3-4B gains 27.9 points and a thinking mode the base model does not have at all; Qwen3-1.7B trades 5.7 points of accuracy for it, and its model card leads with that. Each is published at a lowered LoRA scale, which interpolates between base and fine-tune using the same weights and beat every retrain.</p>
+                        <span class="tech-badge">LoRA / QLoRA</span>
+                        <span class="tech-badge">MLX</span>
+                        <span class="tech-badge">PEFT</span>
+                        <span class="tech-badge">Distillation</span>
+                        <span class="tech-badge">Paired Evaluation</span>
+                        <div class="project-links mt-3">
+                            <a href="https://huggingface.co/axiom-of-choice" target="_blank"><i class="ti-package"></i> Adapters</a>
                         </div>
                     </div>
                 </div>
@@ -739,7 +762,7 @@
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>ANEForge — Apple Neural Engine</h5>
-                        <p class="project-desc">Ongoing contributor to the Python bindings for the Apple Neural Engine, with 9 PRs merged: ONNX operator coverage (fused attention, negative-axis handling), <code>linalg</code> primitives (matrix norms, <code>matrix_power</code>, <code>solve</code> via on-ANE pivoted LU, <code>expm</code> by scaling and squaring), einsum diagonal extraction, int8 quantization gated on activation-encoding range, and the roofline benchmark harness.</p>
+                        <p class="project-desc">Ongoing contributor to the Python bindings for the Apple Neural Engine, with 17 PRs merged: ONNX operator coverage (fused attention, negative-axis handling), <code>linalg</code> primitives (matrix norms, <code>matrix_power</code>, <code>solve</code> via on-ANE pivoted LU, <code>expm</code> by scaling and squaring, <code>inv</code>, QR-based least squares), einsum diagonal extraction, int8 quantization gating, <code>erf</code> as its own polynomial instead of via <code>erfc</code>, and the roofline benchmark harness. A further fix is in review: <code>layer_norm</code> applied its affine inside the rank-4 body, which the compiler rejects from D=1024 up, so any real trained affine failed to compile on M1 and M2.</p>
                         <span class="tech-badge">Apple Neural Engine</span>
                         <span class="tech-badge">Quantization</span>
                         <span class="tech-badge">ONNX</span>
@@ -751,21 +774,33 @@
                 </div>
                 <div class="col-md-6">
                     <div class="project-card">
+                        <h5>coremltools — Apple ML Tooling</h5>
+                        <p class="project-desc">Decomposed <code>Softplus</code> in the TensorFlow frontend to avoid fp16 overflow on the Apple Neural Engine, where the native op's numeric range differs from the CPU and GPU backends. In review.</p>
+                        <span class="tech-badge">Apple Neural Engine</span>
+                        <span class="tech-badge">coremltools</span>
+                        <span class="tech-badge">Numerics</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/apple/coremltools/pull/2814" target="_blank"><i class="ti-pencil-alt"></i> PR #2814</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
                         <h5>vLLM — GGUF Plugin</h5>
-                        <p class="project-desc">Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying the Triton and CUDA dequantization backends handle bf16 output correctly. Merged.</p>
+                        <p class="project-desc">Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying the Triton and CUDA dequantization backends handle bf16 output correctly. Merged. A second fix is in review: the merged-column and QKV weight loaders read the tensor-parallel rank from a keyword argument the v2 loader never passes, so under TP&gt;1 every rank silently kept rank 0's shard and produced wrong output with no error.</p>
                         <span class="tech-badge">vLLM</span>
                         <span class="tech-badge">Inference</span>
                         <span class="tech-badge">Triton</span>
-                        <span class="tech-badge">CUDA</span>
+                        <span class="tech-badge">Tensor Parallelism</span>
                         <div class="project-links mt-3">
-                            <a href="https://github.com/vllm-project/vllm-gguf-plugin/pull/73" target="_blank"><i class="ti-pencil-alt"></i> PR #73</a>
+                            <a href="https://github.com/vllm-project/vllm-gguf-plugin/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> Contributions</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>OpenInference — LLM Observability</h5>
-                        <p class="project-desc">Recorded Anthropic prompt-cache read and write token details on streaming instrumentation paths, so cached-token spend is visible in traces. Merged.</p>
+                        <p class="project-desc">Two PRs merged in the Anthropic instrumentor. Prompt-cache read and write token details are now recorded on the streaming paths, so cached-token spend is visible in traces; and <code>llm.token_count.total</code>, previously emitted only when streaming, is derived on the non-streaming path so both paths report the same totals.</p>
                         <span class="tech-badge">Observability</span>
                         <span class="tech-badge">OpenTelemetry</span>
                         <span class="tech-badge">Tracing</span>
@@ -789,12 +824,13 @@
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>MLX — Apple Silicon Inference</h5>
-                        <p class="project-desc">Incremental weight materialization when saving large checkpoints, keeping peak memory bounded so multi-billion-parameter saves do not trip the Metal GPU watchdog timeout. In review.</p>
+                        <p class="project-desc">Two merged, one in each repo. In <code>mlx-lm</code>: the LoRA trainer's batch shuffling now honors <code>seed=0</code>, which was silently ignored despite being the CLI default, so the most common value was the one that did not reproduce. In MLX core: <code>hadamard_transform</code> failed to compile on the GPU for n = 12, 20 and 28, where a guard present on two of the three stages was missing on the third and left a divide-by-zero in the step count. In review: incremental weight materialization when saving large checkpoints to avoid the Metal GPU watchdog timeout, optional gradient clipping and a non-finite guard for the LoRA trainer, best-validation-loss adapter saving with early stopping, and NaN decoding for e4m3 float8, where the only two NaN encodings decoded to a value the format cannot represent on both backends.</p>
                         <span class="tech-badge">MLX</span>
                         <span class="tech-badge">Apple Silicon</span>
                         <span class="tech-badge">Metal</span>
                         <div class="project-links mt-3">
-                            <a href="https://github.com/ml-explore/mlx-lm/pull/1634" target="_blank"><i class="ti-github"></i> Contribution</a>
+                            <a href="https://github.com/ml-explore/mlx-lm/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> mlx-lm</a>
+                            <a href="https://github.com/ml-explore/mlx/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> mlx</a>
                         </div>
                     </div>
                 </div>
@@ -812,16 +848,55 @@
                 </div>
                 <div class="col-md-6">
                     <div class="project-card">
-                        <h5>langchain-searchapi</h5>
-                        <p class="project-desc">Standalone LangChain integration package for SearchApi.io. Multi-engine search tool with dynamic engine selection, RAG retriever, and full async support. Published on PyPI.</p>
+                        <h5>SearchApi.io Integrations</h5>
+                        <p class="project-desc">Two standalone packages bringing SearchApi.io's multi-engine web search (Google, News, Shopping, YouTube, Bing, Baidu) to agent frameworks: a LangChain integration with a search tool, RAG retriever, and full async support, and a LlamaIndex tool integration. Both published on PyPI, plus the official integration docs upstream in LangChain.</p>
                         <span class="tech-badge">LangChain</span>
+                        <span class="tech-badge">LlamaIndex</span>
                         <span class="tech-badge">PyPI</span>
                         <span class="tech-badge">Search</span>
-                        <span class="tech-badge">RAG</span>
                         <div class="project-links mt-3">
-                            <a href="https://github.com/axiom-of-choice/langchain-searchapi" target="_blank"><i class="ti-github"></i> Code</a>
+                            <a href="https://github.com/axiom-of-choice/langchain-searchapi" target="_blank"><i class="ti-github"></i> LangChain</a>
                             <a href="https://pypi.org/project/langchain-searchapi/" target="_blank"><i class="ti-link"></i> PyPI</a>
+                            <a href="https://github.com/axiom-of-choice/llama-index-tools-searchapi" target="_blank"><i class="ti-github"></i> LlamaIndex</a>
+                            <a href="https://pypi.org/project/llama-index-tools-searchapi/" target="_blank"><i class="ti-link"></i> PyPI</a>
                             <a href="https://github.com/langchain-ai/docs/pull/4703" target="_blank"><i class="ti-pencil-alt"></i> Docs PR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>langchain-google — Gemini Integration</h5>
+                        <p class="project-desc">Two fixes in review. <code>service_tier</code> support on <code>ChatGoogleGenerativeAI</code>, where the constructor argument was silently discarded and the value has to travel as a body field on one backend and a request header on the other, with the accompanying docs page. And schema-aware decoding of the JSON-encoded list and dict tool arguments Gemini returns, which reached Pydantic as strings and failed validation before the tool ever ran. The decode is gated on the declared parameter type, so a string argument carrying a JSON payload is left alone.</p>
+                        <span class="tech-badge">LangChain</span>
+                        <span class="tech-badge">Google Gemini</span>
+                        <span class="tech-badge">Tool Calling</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/langchain-ai/langchain-google/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> Contributions</a>
+                            <a href="https://github.com/langchain-ai/docs/pull/5452" target="_blank"><i class="ti-pencil-alt"></i> Docs PR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>tokenizers — BPE Loader Panic</h5>
+                        <p class="project-desc"><code>BpeBuilder::build()</code> sized its scratch buffer to the longest token in the vocabulary, but a merge writes the concatenation of two, so a crafted <code>tokenizer.json</code> panicked with an out-of-range slice on load, before tokenizing anything. A second bug in the same loop underflowed a <code>usize</code> when the right token was shorter than the continuing-subword prefix. Verified by reverting the source hunks and keeping the tests, which reproduced the panic. In review.</p>
+                        <span class="tech-badge">Rust</span>
+                        <span class="tech-badge">Tokenization</span>
+                        <span class="tech-badge">Hugging Face</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/huggingface/tokenizers/pull/2333" target="_blank"><i class="ti-pencil-alt"></i> PR #2333</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>Inspect AI — Tool Call Parsing</h5>
+                        <p class="project-desc">Tools with an empty or all-optional parameter schema are called with an empty argument body, which some models emit with stray quotes attached, failing the parse and returning a tool error to the model. The issue placed the fault client-side; tracing the value from <code>chat.completions.create()</code> to the parser showed nothing accumulates or re-serializes in between, so the string arrives that way off the wire. That explains why two unrelated backends produced the identical artifact. In review.</p>
+                        <span class="tech-badge">Evaluation</span>
+                        <span class="tech-badge">Agents</span>
+                        <span class="tech-badge">Tool Calling</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/UKGovernmentBEIS/inspect_ai/pull/4832" target="_blank"><i class="ti-pencil-alt"></i> PR #4832</a>
                         </div>
                     </div>
                 </div>
