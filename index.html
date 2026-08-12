@@ -706,7 +706,7 @@
     <section id="opensource" class="section">
         <div class="container">
             <h6 class="section-title mb-4 text-center">Open Source Contributions</h6>
-            <p class="mb-5 pb-4 text-center">Active contributor to major AI/ML frameworks and tools. Datasets and quantized models on <a href="https://huggingface.co/axiom-of-choice" target="_blank">Hugging Face</a>.</p>
+            <p class="mb-5 pb-4 text-center">Active contributor to major AI/ML frameworks and tools. Datasets, fine-tuned adapters and quantized models on <a href="https://huggingface.co/axiom-of-choice" target="_blank">Hugging Face</a>.</p>
 
             <div class="row">
                 <div class="col-md-6">
@@ -719,6 +719,20 @@
                         <span class="tech-badge">Hugging Face</span>
                         <div class="project-links mt-3">
                             <a href="https://huggingface.co/datasets/axiom-of-choice/bespoke-stratos-es" target="_blank"><i class="ti-package"></i> Dataset</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>Spanish Reasoning Adapters — LoRA / QLoRA</h5>
+                        <p class="project-desc">Trained three open models to do their chain-of-thought in Spanish on the dataset above, and published each for MLX, PEFT and GGUF. Measured on a held-out Spanish GSM8K split with paired McNemar tests rather than a single score: Qwen3-4B gains <strong>7.4 accuracy points while switching to perfect Spanish</strong> (p = 0.0031), so the capability costs nothing; Gemma-3-4B gains 27.9 points and a thinking mode the base model does not have at all; Qwen3-1.7B trades 5.7 points of accuracy for it, and its model card leads with that. Each is published at a lowered LoRA scale, which interpolates between base and fine-tune using the same weights and beat every retrain.</p>
+                        <span class="tech-badge">LoRA / QLoRA</span>
+                        <span class="tech-badge">MLX</span>
+                        <span class="tech-badge">PEFT</span>
+                        <span class="tech-badge">Distillation</span>
+                        <span class="tech-badge">Paired Evaluation</span>
+                        <div class="project-links mt-3">
+                            <a href="https://huggingface.co/axiom-of-choice" target="_blank"><i class="ti-package"></i> Adapters</a>
                         </div>
                     </div>
                 </div>
@@ -739,7 +753,7 @@
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>ANEForge — Apple Neural Engine</h5>
-                        <p class="project-desc">Ongoing contributor to the Python bindings for the Apple Neural Engine, with 17 PRs merged: ONNX operator coverage (fused attention, negative-axis handling), <code>linalg</code> primitives (matrix norms, <code>matrix_power</code>, <code>solve</code> via on-ANE pivoted LU, <code>expm</code> by scaling and squaring, <code>inv</code>, QR-based least squares), einsum diagonal extraction, int8 quantization gating, <code>erf</code> as its own polynomial instead of via <code>erfc</code>, and the roofline benchmark harness.</p>
+                        <p class="project-desc">Ongoing contributor to the Python bindings for the Apple Neural Engine, with 17 PRs merged: ONNX operator coverage (fused attention, negative-axis handling), <code>linalg</code> primitives (matrix norms, <code>matrix_power</code>, <code>solve</code> via on-ANE pivoted LU, <code>expm</code> by scaling and squaring, <code>inv</code>, QR-based least squares), einsum diagonal extraction, int8 quantization gating, <code>erf</code> as its own polynomial instead of via <code>erfc</code>, and the roofline benchmark harness. A further fix is in review: <code>layer_norm</code> applied its affine inside the rank-4 body, which the compiler rejects from D=1024 up, so any real trained affine failed to compile on M1 and M2.</p>
                         <span class="tech-badge">Apple Neural Engine</span>
                         <span class="tech-badge">Quantization</span>
                         <span class="tech-badge">ONNX</span>
@@ -764,13 +778,13 @@
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>vLLM — GGUF Plugin</h5>
-                        <p class="project-desc">Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying the Triton and CUDA dequantization backends handle bf16 output correctly. Merged.</p>
+                        <p class="project-desc">Enabled bfloat16 inference on Blackwell (sm_100) GPUs by removing a stale device-capability guard, after verifying the Triton and CUDA dequantization backends handle bf16 output correctly. Merged. A second fix is in review: the merged-column and QKV weight loaders read the tensor-parallel rank from a keyword argument the v2 loader never passes, so under TP&gt;1 every rank silently kept rank 0's shard and produced wrong output with no error.</p>
                         <span class="tech-badge">vLLM</span>
                         <span class="tech-badge">Inference</span>
                         <span class="tech-badge">Triton</span>
-                        <span class="tech-badge">CUDA</span>
+                        <span class="tech-badge">Tensor Parallelism</span>
                         <div class="project-links mt-3">
-                            <a href="https://github.com/vllm-project/vllm-gguf-plugin/pull/73" target="_blank"><i class="ti-pencil-alt"></i> PR #73</a>
+                            <a href="https://github.com/vllm-project/vllm-gguf-plugin/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> Contributions</a>
                         </div>
                     </div>
                 </div>
@@ -801,7 +815,7 @@
                 <div class="col-md-6">
                     <div class="project-card">
                         <h5>MLX — Apple Silicon Inference</h5>
-                        <p class="project-desc">Merged: the LoRA trainer's batch shuffling now honors <code>seed=0</code>, which was silently ignored despite being the CLI default, so the most common value was the one that did not reproduce. In review: incremental weight materialization when saving large checkpoints to avoid the Metal GPU watchdog timeout, optional gradient clipping and a non-finite guard for the LoRA trainer, and best-validation-loss adapter saving with early stopping — plus, in MLX core, a GPU <code>hadamard_transform</code> fix for non-power-of-2 factors and NaN decoding for e4m3 float8.</p>
+                        <p class="project-desc">Two merged, one in each repo. In <code>mlx-lm</code>: the LoRA trainer's batch shuffling now honors <code>seed=0</code>, which was silently ignored despite being the CLI default, so the most common value was the one that did not reproduce. In MLX core: <code>hadamard_transform</code> failed to compile on the GPU for n = 12, 20 and 28, where a guard present on two of the three stages was missing on the third and left a divide-by-zero in the step count. In review: incremental weight materialization when saving large checkpoints to avoid the Metal GPU watchdog timeout, optional gradient clipping and a non-finite guard for the LoRA trainer, best-validation-loss adapter saving with early stopping, and NaN decoding for e4m3 float8, where the only two NaN encodings decoded to a value the format cannot represent on both backends.</p>
                         <span class="tech-badge">MLX</span>
                         <span class="tech-badge">Apple Silicon</span>
                         <span class="tech-badge">Metal</span>
@@ -842,13 +856,38 @@
                 </div>
                 <div class="col-md-6">
                     <div class="project-card">
-                        <h5>langchain-google — Gemini service_tier</h5>
-                        <p class="project-desc">Added <code>service_tier</code> support to <code>ChatGoogleGenerativeAI</code>, plus the accompanying docs page. In review.</p>
+                        <h5>langchain-google — Gemini Integration</h5>
+                        <p class="project-desc">Two fixes in review. <code>service_tier</code> support on <code>ChatGoogleGenerativeAI</code>, where the constructor argument was silently discarded and the value has to travel as a body field on one backend and a request header on the other, with the accompanying docs page. And schema-aware decoding of the JSON-encoded list and dict tool arguments Gemini returns, which reached Pydantic as strings and failed validation before the tool ever ran. The decode is gated on the declared parameter type, so a string argument carrying a JSON payload is left alone.</p>
                         <span class="tech-badge">LangChain</span>
                         <span class="tech-badge">Google Gemini</span>
+                        <span class="tech-badge">Tool Calling</span>
                         <div class="project-links mt-3">
-                            <a href="https://github.com/langchain-ai/langchain-google/pull/1937" target="_blank"><i class="ti-pencil-alt"></i> PR #1937</a>
+                            <a href="https://github.com/langchain-ai/langchain-google/pulls?q=author%3Aaxiom-of-choice" target="_blank"><i class="ti-github"></i> Contributions</a>
                             <a href="https://github.com/langchain-ai/docs/pull/5452" target="_blank"><i class="ti-pencil-alt"></i> Docs PR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>tokenizers — BPE Loader Panic</h5>
+                        <p class="project-desc"><code>BpeBuilder::build()</code> sized its scratch buffer to the longest token in the vocabulary, but a merge writes the concatenation of two, so a crafted <code>tokenizer.json</code> panicked with an out-of-range slice on load, before tokenizing anything. A second bug in the same loop underflowed a <code>usize</code> when the right token was shorter than the continuing-subword prefix. Verified by reverting the source hunks and keeping the tests, which reproduced the panic. In review.</p>
+                        <span class="tech-badge">Rust</span>
+                        <span class="tech-badge">Tokenization</span>
+                        <span class="tech-badge">Hugging Face</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/huggingface/tokenizers/pull/2333" target="_blank"><i class="ti-pencil-alt"></i> PR #2333</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h5>Inspect AI — Tool Call Parsing</h5>
+                        <p class="project-desc">Tools with an empty or all-optional parameter schema are called with an empty argument body, which some models emit with stray quotes attached, failing the parse and returning a tool error to the model. The issue placed the fault client-side; tracing the value from <code>chat.completions.create()</code> to the parser showed nothing accumulates or re-serializes in between, so the string arrives that way off the wire. That explains why two unrelated backends produced the identical artifact. In review.</p>
+                        <span class="tech-badge">Evaluation</span>
+                        <span class="tech-badge">Agents</span>
+                        <span class="tech-badge">Tool Calling</span>
+                        <div class="project-links mt-3">
+                            <a href="https://github.com/UKGovernmentBEIS/inspect_ai/pull/4832" target="_blank"><i class="ti-pencil-alt"></i> PR #4832</a>
                         </div>
                     </div>
                 </div>
